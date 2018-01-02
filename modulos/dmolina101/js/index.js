@@ -1,5 +1,5 @@
 $(document).ready(function(){
 
-  alert('sape');
+  //alert('sape');
 
 })
