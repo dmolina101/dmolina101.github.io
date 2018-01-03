@@ -1,5 +1,160 @@
 #menu_principal{
   background-color:#ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  min-height: 56px;
+  padding-left: 100px;
 
+  #itemsMenuPrincipal{
 
-}//Fin menu_principal
+    .nav-item{
+
+      &:hover{
+        cursor: pointer;
+
+      }
+
+    }//Fin .nav-item
+
+  }//Fin #itemsMenuPrincipal
+
+  #menu_contacto{
+
+    .nav-item{
+
+      &:hover{
+        cursor: pointer;
+
+      }
+
+      .nav-link{
+
+        &.linkedin{
+          &:hover{
+            color: rgb(0,115,177);
+          }
+        }
+
+        &.youtube{
+          &:hover{
+            color: rgb(204, 2, 2);
+          }
+        }
+
+        .fa{
+          font-size: 28px;
+          transition: all 0.2s;
+
+        }//Fin .fa
+
+      }//Fin .nav-link
+
+    }//Fin .nav-item
+
+  }//Fin #menu_contacto
+
+}//Fin #menu_principal
+
+#contenido_principal{
+  background-color:rgba(0,0,0,0.05);
+  margin-top: 56px;
+
+  .wrapper_me{
+    padding-top: 50px;
+
+    .avatar{
+      width: 60%;
+    }//Fin .avatar
+
+    .titulo{
+      color: rgba(0,0,0,0.6);
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+
+      @media (max-width: 1200px){
+        font-size: 30px;
+      }
+
+      @media (max-width: 992px){
+        font-size: 23px;
+      }
+
+      @media (max-width: 768px){
+        font-size: 18px;
+      }
+
+      @media (max-width: 575px){
+        font-size: 30px;
+      }
+
+      @media (max-width: 360px){
+        font-size: 24px;
+      }
+
+    }//Fin .titulo
+
+    .subtitulo{
+      color: rgba(0,0,0,0.6);
+      font-size: 23px;
+      text-align: center;
+
+      @media (max-width: 1200px){
+        font-size: 23px;
+      }
+
+      @media (max-width: 992px){
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px){
+        border: 1px solid red;
+        font-size: 18px;
+      }
+
+      @media (max-width: 575px){
+        font-size: 30px;
+      }
+
+      @media (max-width: 360px){
+        font-size: 24px;
+      }
+
+    }//Fin .subtitulo
+
+    .info{
+      color: rgba(0,0,0,0.6);
+      font-size: 17px;
+      text-align: center;
+
+      .pais{
+        height: auto;
+        margin-top: -5px;
+        width: 23px;
+      }//Fin .pais
+
+    }//Fin .info
+
+  }//Fin .wrapper_me
+
+  .wrapper_section{
+    padding-top: 50px;
+
+    > .row{
+
+      > div[class*='col-']{
+
+        .info{
+          background-color: #ffffff;
+          border-radius: 4px;
+          margin-bottom: 50px;
+          padding: 20px;
+
+        }//Fin .info
+
+      }//Fin > div[class*='col-']
+
+    }//Fin >.row
+
+  }//Fin .wrapper_section
+
+}//Fin #contenido_principal
