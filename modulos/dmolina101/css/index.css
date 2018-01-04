@@ -1,3 +1,6 @@
+/*
+  Mixins
+*/
 #menu_principal {
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -24,6 +27,9 @@
   background-color: rgba(0, 0, 0, 0.05);
   margin-top: 56px;
 }
+#contenido_principal > .row > div[class*='col-']:nth-child(1) {
+  padding-right: 0px;
+}
 #contenido_principal .wrapper_me {
   padding-top: 50px;
 }
@@ -43,12 +49,12 @@
 }
 @media (max-width: 992px) {
   #contenido_principal .wrapper_me .titulo {
-    font-size: 23px;
+    font-size: 22px;
   }
 }
 @media (max-width: 768px) {
   #contenido_principal .wrapper_me .titulo {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media (max-width: 575px) {
@@ -73,13 +79,12 @@
 }
 @media (max-width: 992px) {
   #contenido_principal .wrapper_me .subtitulo {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media (max-width: 768px) {
   #contenido_principal .wrapper_me .subtitulo {
-    border: 1px solid red;
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 @media (max-width: 575px) {
@@ -97,6 +102,31 @@
   font-size: 17px;
   text-align: center;
 }
+@media (max-width: 1200px) {
+  #contenido_principal .wrapper_me .info {
+    font-size: 17px;
+  }
+}
+@media (max-width: 992px) {
+  #contenido_principal .wrapper_me .info {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  #contenido_principal .wrapper_me .info {
+    font-size: 15px;
+  }
+}
+@media (max-width: 575px) {
+  #contenido_principal .wrapper_me .info {
+    font-size: 17px;
+  }
+}
+@media (max-width: 360px) {
+  #contenido_principal .wrapper_me .info {
+    font-size: 17px;
+  }
+}
 #contenido_principal .wrapper_me .info .pais {
   height: auto;
   margin-top: -5px;
@@ -110,4 +140,97 @@
   border-radius: 4px;
   margin-bottom: 50px;
   padding: 20px;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating {
+  margin-bottom: 50px;
+  padding-left: 100px;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget {
+  width: 100%;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 17%;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(1).br-selected {
+  background-color: #e01f2f;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(2).br-selected {
+  background-color: #ed9004;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(3).br-selected {
+  background-color: #55ce33;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(4).br-selected {
+  background-color: #1cddc0;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget .br-current-rating {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.html img {
+  height: 30px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.css img {
+  height: 30px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.js img {
+  height: 30px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.mysql img {
+  height: 30px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.node img {
+  height: 30px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.less img {
+  height: 22px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.oracle img {
+  height: 15px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.dynamodb img {
+  height: 28px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.php img {
+  height: 28px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.bootstrap img {
+  height: 28px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.codeigniter img {
+  height: 25px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.laravel img {
+  height: 25px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.android img {
+  height: 30px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.jquery img {
+  height: 25px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.git img {
+  height: 25px;
+  width: auto;
+}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.composer img {
+  height: 30px;
+  width: auto;
 }

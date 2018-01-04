@@ -1,3 +1,22 @@
+/*
+  Mixins
+*/
+.colorSkill(@bgColor,@color){
+
+  .br-widget{
+
+    a{
+      background-color: @bgColor;
+    }
+
+    .br-current-rating{
+      color: @color;
+    }
+
+  }
+
+}
+
 #menu_principal{
   background-color:#ffffff;
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -58,6 +77,18 @@
   background-color:rgba(0,0,0,0.05);
   margin-top: 56px;
 
+  > .row{
+
+    > div[class*='col-']{
+
+      &:nth-child(1){
+        padding-right: 0px;
+      }
+
+    }
+
+  }//Fin > .row
+
   .wrapper_me{
     padding-top: 50px;
 
@@ -76,11 +107,11 @@
       }
 
       @media (max-width: 992px){
-        font-size: 23px;
+        font-size: 22px;
       }
 
       @media (max-width: 768px){
-        font-size: 18px;
+        font-size: 16px;
       }
 
       @media (max-width: 575px){
@@ -103,12 +134,11 @@
       }
 
       @media (max-width: 992px){
-        font-size: 16px;
+        font-size: 20px;
       }
 
       @media (max-width: 768px){
-        border: 1px solid red;
-        font-size: 18px;
+        font-size: 19px;
       }
 
       @media (max-width: 575px){
@@ -125,6 +155,26 @@
       color: rgba(0,0,0,0.6);
       font-size: 17px;
       text-align: center;
+
+      @media (max-width: 1200px){
+        font-size: 17px;
+      }
+
+      @media (max-width: 992px){
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px){
+        font-size: 15px;
+      }
+
+      @media (max-width: 575px){
+        font-size: 17px;
+      }
+
+      @media (max-width: 360px){
+        font-size: 17px;
+      }
 
       .pais{
         height: auto;
@@ -148,6 +198,166 @@
           border-radius: 4px;
           margin-bottom: 50px;
           padding: 20px;
+
+          .rating{
+            margin-bottom: 50px;
+            padding-left: 100px;
+
+            .br-widget{
+              width: 100%;
+
+              a{
+                background-color: rgba(0,0,0,0.1);
+                width: 17%;
+
+                &:nth-child(1){
+                  &.br-selected{
+                    background-color: #e01f2f;
+                  }
+                }
+
+                &:nth-child(2){
+                  &.br-selected{
+                    background-color: #ed9004;
+                  }
+                }
+
+                &:nth-child(3){
+                  &.br-selected{
+                    background-color: #55ce33;
+                  }
+                }
+
+                &:nth-child(4){
+                  &.br-selected{
+                    background-color: #1cddc0;
+                  }
+                }
+
+              }//Fin a
+
+              .br-current-rating{
+                color: rgba(0,0,0,0.7);
+                font-weight: bold;
+                text-align: left;
+                width: 100%;
+              }
+
+            }//Fin .br-widget
+
+            &.html{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }//Fin .html
+
+            &.css{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }//Fin .css
+
+            &.js{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }//Fin .js
+
+            &.mysql{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }//Fin .mysql
+
+            &.node{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }//Fin .node
+
+            &.less{
+              img{
+                height: 22px;
+                width: auto;
+              }
+            }//Fin .less
+
+            &.oracle{
+              img{
+                height: 15px;
+                width: auto;
+              }
+            }//Fin .nooraclede
+
+            &.dynamodb{
+              img{
+                height: 28px;
+                width: auto;
+              }
+            }//Fin .dynamodb
+
+            &.php{
+              img{
+                height: 28px;
+                width: auto;
+              }
+            }//Fin .bootstrap
+
+            &.bootstrap{
+              img{
+                height: 28px;
+                width: auto;
+              }
+            }//Fin .bootstrap
+
+            &.codeigniter{
+              img{
+                height: 25px;
+                width: auto;
+              }
+            }//Fin .codeigniter
+
+            &.laravel{
+              img{
+                height: 25px;
+                width: auto;
+              }
+            }//Fin .laravel
+
+            &.android{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }//Fin .android
+
+            &.jquery{
+              img{
+                height: 25px;
+                width: auto;
+              }
+            }//Fin .jquery
+
+            &.git{
+              img{
+                height: 25px;
+                width: auto;
+              }
+            }//Fin .git
+
+            &.composer{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }//Fin .git
+
+          }//Fin .rating
 
         }//Fin .info
 
