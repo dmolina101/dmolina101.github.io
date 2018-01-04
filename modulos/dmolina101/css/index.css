@@ -270,3 +270,6 @@
     padding-left: 30px;
   }
 }
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .card {
+  margin-bottom: 15px;
+}
