@@ -49,9 +49,9 @@ $.fn.eventos = function(){
                                   .animate({ scrollTop: $('#skills').offset().top - 60 }, 700);
                                   break;
 
-      case 'planes_tiendas': $("html")
-                             .animate({ scrollTop: $('#section_3').offset().top }, 700);
-                             break;
+      case 'section_experiencia': $("html")
+                                 .animate({ scrollTop: $('#experiencia').offset().top - 60 }, 700);
+                                 break;
 
     }//Fin del switch
 
