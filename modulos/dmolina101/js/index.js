@@ -21,4 +21,43 @@ $(document).ready(function(){
     theme         : 'bars-movie'
   });
 
+  $.fn.eventos();
+
 });//Fin del document ready
+
+/*
+  Función donde se declaran todos los eventos
+*/
+$.fn.eventos = function(){
+
+  /*
+    Evento click sobre el link #itemsMenuPrincipal
+  */
+	$('#itemsMenuPrincipal .nav-link').unbind('click');
+	$('#itemsMenuPrincipal .nav-link').click(function(){
+
+    //Obtenemos el id
+    var id = $(this).attr('id');
+
+    switch(id){
+
+      case 'section_inicio': $("html")
+                             .animate({ scrollTop: 0 }, 700);
+                             break;
+
+      case 'section_habilidades': $("html")
+                                  .animate({ scrollTop: $('#skills').offset().top - 60 }, 700);
+                                  break;
+
+      case 'planes_tiendas': $("html")
+                             .animate({ scrollTop: $('#section_3').offset().top }, 700);
+                             break;
+
+    }//Fin del switch
+
+		$.fn.eventos();
+
+	});//Fin del evento click
+  /***********************/
+
+};//Fin de la función $.fn.eventos
