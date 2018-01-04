@@ -10,8 +10,24 @@
 #menu_principal #itemsMenuPrincipal .nav-item:hover {
   cursor: pointer;
 }
+#menu_principal #menu_contacto {
+  padding-left: 0px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  width: auto;
+}
+#menu_principal #menu_contacto .nav-item {
+  display: inline-block !important;
+  float: left;
+}
 #menu_principal #menu_contacto .nav-item:hover {
   cursor: pointer;
+}
+#menu_principal #menu_contacto .nav-item .nav-link {
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 7px;
+  padding-right: 7px;
 }
 #menu_principal #menu_contacto .nav-item .nav-link.linkedin:hover {
   color: #0073b1;
