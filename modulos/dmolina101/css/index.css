@@ -209,23 +209,13 @@
   text-align: left;
   width: 100%;
 }
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.html img {
-  height: 30px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.css img {
-  height: 30px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.js img {
-  height: 30px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.mysql img {
-  height: 30px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.node img {
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.html img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.css img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.js img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.mysql img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.node img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.android img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.composer img {
   height: 30px;
   width: auto;
 }
@@ -237,48 +227,22 @@
   height: 15px;
   width: auto;
 }
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.dynamodb img {
-  height: 28px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.php img {
-  height: 28px;
-  width: auto;
-}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.dynamodb img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.php img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.bootstrap img {
   height: 28px;
   width: auto;
 }
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.soap img {
-  height: 20px;
-  width: auto;
-}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.soap img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.restful img {
   height: 20px;
   width: auto;
 }
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.codeigniter img {
-  height: 25px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.laravel img {
-  height: 25px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.android img {
-  height: 30px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.jquery img {
-  height: 25px;
-  width: auto;
-}
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.codeigniter img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.laravel img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.jquery img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.git img {
   height: 25px;
-  width: auto;
-}
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.composer img {
-  height: 30px;
   width: auto;
 }
 @media (max-width: 1200px) {
