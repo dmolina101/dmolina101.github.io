@@ -35,6 +35,9 @@
 #menu_principal #menu_contacto .nav-item .nav-link.youtube:hover {
   color: #cc0202;
 }
+#menu_principal #menu_contacto .nav-item .nav-link.github:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
 #menu_principal #menu_contacto .nav-item .nav-link .fa {
   font-size: 28px;
   transition: all 0.2s;
