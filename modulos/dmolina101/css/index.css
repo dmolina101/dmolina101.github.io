@@ -276,3 +276,27 @@
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .card .modal_certificado {
   color: #ffffff;
 }
+#modal_certificado {
+  z-index: 99999;
+}
+#modal_certificado .modal-dialog {
+  min-width: 0px;
+  width: auto;
+  max-width: 530px;
+}
+#modal_certificado .modal-dialog .modal-content .modal-header {
+  height: 18px;
+  padding: 3px 3px 3px 3px;
+}
+#modal_certificado .modal-dialog .modal-content .modal-header button {
+  position: absolute;
+  right: 0px;
+}
+#modal_certificado .modal-dialog .modal-content .modal-body {
+  padding: 0px;
+}
+#modal_certificado .modal-dialog .modal-content .modal-footer {
+  border: 0px;
+  border-color: rgba(0, 0, 0, 0);
+  padding: 0px;
+}

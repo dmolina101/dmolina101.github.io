@@ -343,7 +343,7 @@
             margin-bottom: 15px;
 
             .modal_certificado{
-              color: #ffffff;              
+              color: #ffffff;
             }
 
           }//Fin .card
@@ -357,3 +357,40 @@
   }//Fin .wrapper_section
 
 }//Fin #contenido_principal
+
+#modal_certificado{
+	z-index: 99999;
+
+	.modal-dialog{
+    min-width: 0px;
+    width: auto;
+		max-width:530px;
+
+		.modal-content{
+
+      .modal-header{
+        height: 18px;
+				padding:3px 3px 3px 3px;
+
+			  button{
+          position: absolute;
+          right: 0px;
+        }
+
+			}//Fin .modal-header
+
+      .modal-body{
+        padding: 0px;
+			}//Fin .modal-body
+
+			.modal-footer{
+        border: 0px;
+        border-color:rgba(0,0,0,0);
+				padding:0px;
+			}//Fin .modal-footer
+
+		}//Fin .modal-content
+
+	}//Fin .modal-dialog
+
+}//Fin #modal_certificado

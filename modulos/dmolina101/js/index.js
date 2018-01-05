@@ -78,7 +78,7 @@ $.fn.eventos = function(){
     //Obtenemos el id
     var id = $(this).attr('id');
 
-    alert(id);
+    $.fn.modal_certificado(id);
 
     $.fn.eventos();
 
@@ -86,3 +86,58 @@ $.fn.eventos = function(){
   /***********************/
 
 };//Fin de la función $.fn.eventos
+
+/*
+  Función que arma la modal para mostrar los certificados
+*/
+$.fn.modal_certificado = function(id){
+
+  switch(id){
+
+    case 'certificado1': var img = '<img src="modulos/dmolina101/images/certificados/2.jpg" class="img-fluid">';
+                         break;
+
+    case 'certificado2': var img = '<img src="modulos/dmolina101/images/certificados/3.jpg" class="img-fluid">';
+                        break;
+
+    case 'certificado3': var img = '<img src="modulos/dmolina101/images/certificados/4.jpg" class="img-fluid">';
+                         break;
+
+    case 'certificado4': var img = '<img src="modulos/dmolina101/images/certificados/1.jpg" class="img-fluid">';
+                         break;
+
+  }//Fin switch
+
+  var modal = `<div class="modal fade" id="modal_certificado" tabindex="-1" role="dialog" aria-hidden="true">
+      				  <div class="modal-dialog" role="document">
+      					<div class="modal-content">
+      					  <div class="modal-header">
+      						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      						  <span aria-hidden="true">&times;</span>
+      						</button>
+      					  </div>
+      					  <div class="modal-body">
+                    `+img+`
+      					  </div>
+      					  <div class="modal-footer"></div>
+      					</div>
+      				  </div>
+      				</div>`;
+
+    //Agregamos la modal al body
+	$('body').append(modal);
+
+	//Opciones de la modal
+	$('#modal_certificado').modal({backdrop : 'static'})
+
+  //Evento cuando se cierre la modal
+	$('#modal_certificado').on('hidden.bs.modal', function(e){
+
+		$(this).remove();
+
+	});
+
+  //Mostramos la modal
+	$('#modal_certificado').modal('show');
+
+};//Fin de la función modal_certificado
