@@ -20,12 +20,29 @@ $(document).ready(function(){
     readonly      : true,
     theme         : 'bars-movie'
   });
-
+//alert($(window).width())
   //Evento scroll sobre la ventana
   $(window).scroll(function(){
 
     //Removemos los tooltips activos
     $('.tooltip').remove();
+
+    //Obtenemos el ancho de la pantalla
+    var ancho = $(window).width();
+
+    //Obtenemos la distancia del top
+    var top = $(document).scrollTop();
+
+    //Evaluamos si reposicionamos
+    if(ancho > 558){
+
+      $('.wrapper_me').css('margin-top',top);
+
+    }else{
+
+      $('.wrapper_me').css('margin-top',0);
+
+    }
 
   });
 

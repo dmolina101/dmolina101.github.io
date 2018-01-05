@@ -4,8 +4,14 @@
   min-height: 56px;
   padding-left: 7%;
 }
+#menu_principal .navbar-toggler {
+  border: 1px solid #ffffff;
+}
 #menu_principal .navbar-toggler:hover {
   cursor: pointer;
+}
+#menu_principal .navbar-toggler span {
+  border-color: #ffffff;
 }
 #menu_principal #itemsMenuPrincipal .nav-item:hover {
   cursor: pointer;
@@ -52,7 +58,7 @@
 }
 #contenido_principal .wrapper_me {
   padding-top: 50px;
-  position: fixed;
+  transition: all 0.4s;
 }
 #contenido_principal .wrapper_me .avatar {
   width: 60%;
