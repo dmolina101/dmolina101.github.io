@@ -83,7 +83,11 @@ $.fn.eventos = function(){
     //Evaluamos el dispositivo
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)){
 
-      window.scrollTo(0,top);
+      setTimeout(function() {
+
+        window.scrollTo(0,top);
+
+      }, 700);
 
     }else{
 
