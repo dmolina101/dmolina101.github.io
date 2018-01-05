@@ -75,10 +75,10 @@ $.fn.eventos = function(){
   $('.modal_certificado').unbind('click');
   $('.modal_certificado').click(function(){
 
-    //Obtenemos el indice
-    var indice = $(this).index();
+    //Obtenemos el id
+    var id = $(this).attr('id');
 
-    alert(indice);
+    alert(id);
 
     $.fn.eventos();
 
