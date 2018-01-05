@@ -23,7 +23,10 @@ $(document).ready(function(){
 
   //Evento scroll sobre la ventana
   $(window).scroll(function(){
+
+    //Removemos los tooltips activos
     $('.tooltip').remove();
+
   });
 
   $.fn.eventos();

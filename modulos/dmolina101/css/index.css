@@ -52,6 +52,7 @@
 }
 #contenido_principal .wrapper_me {
   padding-top: 50px;
+  position: fixed;
 }
 #contenido_principal .wrapper_me .avatar {
   width: 60%;
