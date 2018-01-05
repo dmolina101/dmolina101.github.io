@@ -58,11 +58,31 @@ $.fn.eventos = function(){
                                  .animate({ scrollTop: $('#experiencia').offset().top - 60 }, 700);
                                  break;
 
+      case 'section_certificados': $("html")
+                                   .animate({ scrollTop: $('#certificados').offset().top - 60 }, 700);
+                                   break;
+
     }//Fin del switch
 
 		$.fn.eventos();
 
 	});//Fin del evento click
+  /***********************/
+
+  /*
+    Evento click sobre .modal_certificado
+  */
+  $('.modal_certificado').unbind('click');
+  $('.modal_certificado').click(function(){
+
+    //Obtenemos el indice
+    var indice = $(this).index();
+
+    alert(indice);
+
+    $.fn.eventos();
+
+  });//Fin del evento click
   /***********************/
 
 };//Fin de la función $.fn.eventos

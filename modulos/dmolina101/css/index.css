@@ -273,3 +273,6 @@
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .card {
   margin-bottom: 15px;
 }
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .card .modal_certificado {
+  color: #ffffff;
+}
