@@ -21,6 +21,11 @@ $(document).ready(function(){
     theme         : 'bars-movie'
   });
 
+  //Evento scroll sobre la ventana
+  $(window).scroll(function(){
+    $('.tooltip').remove();
+  });
+
   $.fn.eventos();
 
 });//Fin del document ready
