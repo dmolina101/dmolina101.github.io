@@ -66,23 +66,31 @@ $.fn.eventos = function(){
 
     switch(id){
 
-      case 'section_inicio': $("html")
-                             .animate({ scrollTop: 0 }, 700);
+      case 'section_inicio': var top = 0;
                              break;
 
-      case 'section_habilidades': $("html")
-                                  .animate({ scrollTop: $('#skills').offset().top - 60 }, 700);
+      case 'section_habilidades': var top = $('#skills').offset().top - 60;
                                   break;
 
-      case 'section_experiencia': $("html")
-                                 .animate({ scrollTop: $('#experiencia').offset().top - 60 }, 700);
-                                 break;
+      case 'section_experiencia': var top = $('#experiencia').offset().top - 60;
+                                  break;
 
-      case 'section_certificados': $("html")
-                                   .animate({ scrollTop: $('#certificados').offset().top - 60 }, 700);
+      case 'section_certificados': var top = $('#certificados').offset().top - 60;
                                    break;
 
     }//Fin del switch
+
+    //Evaluamos el dispositivo
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)){
+
+      window.scrollTo(0,top);
+
+    }else{
+
+      $("html")
+      .animate({ scrollTop: top}, 700);
+
+    }//Fin del if
 
 		$.fn.eventos();
 
