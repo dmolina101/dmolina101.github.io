@@ -1,5 +1,5 @@
 #menu_principal{
-  background-color:#ffffff;
+  background-color:#3399ff;
   border-bottom: 1px solid rgba(0,0,0,0.2);
   min-height: 56px;
   padding-left: 7%;
@@ -16,6 +16,15 @@
 
       &:hover{
         cursor: pointer;
+      }
+
+      .nav-link{
+        color: rgba(255,255,255,0.9);
+        transition: all 0.3s;
+
+        &:hover{
+          color: rgba(0,0,0,0.8);
+        }
 
       }
 
@@ -39,26 +48,12 @@
       }
 
       .nav-link{
-        color: rgba(0,0,0,0.6);
+        color: rgba(255,255,255,0.9);
         padding-left: 7px;
         padding-right: 7px;
 
-        &.linkedin{
-          &:hover{
-            color: rgb(0,115,177);
-          }
-        }
-
-        &.youtube{
-          &:hover{
-            color: rgb(204, 2, 2);
-          }
-        }
-
-        &.github{
-          &:hover{
-            color: rgba(0,0,0,0.8);
-          }
+        &:hover{
+          color: rgba(0,0,0,0.8);
         }
 
         .fa{
@@ -194,6 +189,10 @@
     > .row{
 
       > div[class*='col-']{
+
+        .titulo{
+          color:#3399ff;
+        }
 
         .info{
           background-color: #ffffff;
@@ -340,10 +339,20 @@
           }//Fin .rating
 
           .card{
+            border-color: rgba(51,153,255,0.35);
             margin-bottom: 15px;
 
             .modal_certificado{
+              background-color:rgba(51,153,255,1);
               color: #ffffff;
+              transition: all 0.3s;
+
+              &:hover{
+                background-color: rgba(0,0,0,1);
+                border-color: rgba(0,0,0,0.9);
+                cursor: pointer;
+              }
+
             }
 
           }//Fin .card
