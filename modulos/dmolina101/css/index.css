@@ -61,7 +61,7 @@
   transition: all 0.4s;
 }
 #contenido_principal .wrapper_me .avatar {
-  width: 60%;
+  width: 50%;
 }
 #contenido_principal .wrapper_me .titulo {
   color: rgba(0, 0, 0, 0.6);
