@@ -13,6 +13,7 @@
     <script src="modulos/tether-1.3.3/dist/js/tether.js"></script>
     <script src="modulos/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
     <script src="modulos/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="modulos/dmolina101/js/idioma/idioma.js"></script>
     <script src="modulos/dmolina101/js/index.js"></script>
 
   </head>
@@ -68,7 +69,7 @@
             <div class="subtitulo">Curriculum Vitae</div>
             <div class="info">
               <i class="fa fa-code" aria-hidden="true"></i>
-              Programador
+              <span id="programador">Programador</span>
             </div>
             <div class="info">
               <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -80,7 +81,7 @@
             </div>
             <div class="info">
               <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-              Universidad Bolivariana </br> de Venezuela 2004 - 2010
+              <span id="universidad">Universidad Bolivariana </br> de Venezuela 2004 - 2010</span>
             </div>
             <div class="info">
               <img src="modulos/dmolina101/images/ve.png" class="pais">
@@ -94,8 +95,8 @@
             <div id="sobre_mi" class="row">
               <div class="col-12">
 
-                <h2 class="titulo">Sobre Mí</h2>
-                <div class="info">
+                <h2 class="titulo sobreMi">Sobre Mí</h2>
+                <div class="info infoSobreMi">
                   <p>Hola!, soy David Molina, programador especialista en Maquetación Web y JavaScript.</p>
                   <p>En 2008 obtuve mi diploma de Técnico Superior en Informática y en 2010 obtuve mi diploma de Licenciado en Infomática para la Gestión Social en la Universidad Bolivariana de Venezuela. Estoy <del>echando código</del> programando aproximadamente desde los 16 años de edad aunque profesionalmente comencé a ejercer a los 21 años.</p>
                   <p>Me considero un programador extremadamente apasionado que le encanta ayudar a construir sueños. Durante todos mis años como programador he aprendido a desempeñarme en varias áreas de desarrollo web desde la programación back-end (PHP, SQL, NoSQL, nodeJs) hasta la programación front-end (HTML, CSS, y Javascript), experiencia del usuario y diseño visual.</p>
@@ -107,12 +108,12 @@
             <div id="skills" class="row">
               <div class="col-12">
 
-                <h2 class="titulo">Habilidades</h2>
+                <h2 class="titulo habilidades">Habilidades</h2>
                 <div class="info">
                   <div class="row">
                     <div class="col-12 col-sm-6 rating html">
                       <img src="modulos/dmolina101/images/html.jpg" data-toggle="tooltip" data-placement="bottom" title="Html5">
-                      <select id="html">
+                      <select id="html" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -121,7 +122,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating css">
                       <img src="modulos/dmolina101/images/css.jpg" data-toggle="tooltip" data-placement="bottom" title="CSS3">
-                      <select id="css3">
+                      <select id="css3" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -132,7 +133,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 rating js">
                       <img src="modulos/dmolina101/images/js.jpg" data-toggle="tooltip" data-placement="bottom" title="JS">
-                      <select id="js">
+                      <select id="js" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -141,7 +142,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating mysql">
                       <img src="modulos/dmolina101/images/mysql.jpg" data-toggle="tooltip" data-placement="bottom" title="MySql">
-                      <select id="mysql">
+                      <select id="mysql" class="bueno">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -152,7 +153,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 rating node">
                       <img src="modulos/dmolina101/images/node.jpg" data-toggle="tooltip" data-placement="bottom" title="NodeJS">
-                      <select id="node">
+                      <select id="node" class="bueno">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -161,7 +162,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating less">
                       <img src="modulos/dmolina101/images/less.jpg" data-toggle="tooltip" data-placement="bottom" title="Less">
-                      <select id="less">
+                      <select id="less" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -172,7 +173,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 rating oracle">
                       <img src="modulos/dmolina101/images/oracle.jpg" data-toggle="tooltip" data-placement="bottom" title="Oracle">
-                      <select id="oracle">
+                      <select id="oracle" class="bueno">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -181,7 +182,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating dynamodb">
                       <img src="modulos/dmolina101/images/dynamodb.jpg" data-toggle="tooltip" data-placement="bottom" title="DynamoDB">
-                      <select id="dynamodb">
+                      <select id="dynamodb" class="regular">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -192,7 +193,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 rating php">
                       <img src="modulos/dmolina101/images/php.jpg" data-toggle="tooltip" data-placement="bottom" title="PHP">
-                      <select id="php">
+                      <select id="php" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -202,17 +203,17 @@
                     <div class="col-12 col-sm-6 rating bootstrap">
                       <img src="modulos/dmolina101/images/bootstrap.jpg" data-toggle="tooltip" data-placement="bottom" title="Bootstrap">
                       <select id="bootstrap">
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
+                        <option value="1" class="pesimo">Pésimo</option>
+                        <option value="2" class="regular">Regular</option>
+                        <option value="3" class="bueno">Bueno</option>
+                        <option value="4" class="excelente">Excelente</option>
                       </select>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-12 col-sm-6 rating soap">
                       <img src="modulos/dmolina101/images/soap.jpg" data-toggle="tooltip" data-placement="bottom" title="SOAP">
-                      <select id="soap">
+                      <select id="soap" class="bueno">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -221,7 +222,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating restful">
                       <img src="modulos/dmolina101/images/restful.jpg" data-toggle="tooltip" data-placement="bottom" title="RESTful">
-                      <select id="restful">
+                      <select id="restful" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -232,7 +233,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 rating codeigniter">
                       <img src="modulos/dmolina101/images/codeigniter.jpg" data-toggle="tooltip" data-placement="bottom" title="Codeigniter">
-                      <select id="codeigniter">
+                      <select id="codeigniter" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -241,7 +242,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating laravel">
                       <img src="modulos/dmolina101/images/laravel.jpg" data-toggle="tooltip" data-placement="bottom" title="Laravel">
-                      <select id="laravel">
+                      <select id="laravel" class="regular">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -252,7 +253,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 rating android">
                       <img src="modulos/dmolina101/images/android.jpg" data-toggle="tooltip" data-placement="bottom" title="Android">
-                      <select id="android">
+                      <select id="android" class="regular">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -261,7 +262,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating jquery">
                       <img src="modulos/dmolina101/images/jquery.jpg" data-toggle="tooltip" data-placement="bottom" title="Jquery">
-                      <select id="jquery">
+                      <select id="jquery" class="excelente">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -272,7 +273,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 rating git">
                       <img src="modulos/dmolina101/images/git.jpg" data-toggle="tooltip" data-placement="bottom" title="Git">
-                      <select id="git">
+                      <select id="git" class="bueno">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -281,7 +282,7 @@
                     </div>
                     <div class="col-12 col-sm-6 rating composer">
                       <img src="modulos/dmolina101/images/composer.jpg" data-toggle="tooltip" data-placement="bottom" title="Composer">
-                      <select id="composer">
+                      <select id="composer" class="regular">
                         <option value="1">Pésimo</option>
                         <option value="2">Regular</option>
                         <option value="3">Bueno</option>
@@ -294,61 +295,61 @@
             </div>
             <div id="experiencia" class="row">
               <div class="col-12">
-                <h2 class="titulo">Experiencia Laboral</h2>
+                <h2 class="titulo experiencia">Experiencia Laboral</h2>
                 <div class="info">
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">Técnologia Creativa A&R</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Programador Web y Lider de Proyecto.</h5>
+                      <h5 class="card-subtitle mb-2 text-muted tecCreativa">Programador Web y Lider de Proyecto.</h5>
                       <p class="card-text">01/2016 – Presente</p>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Coordinador de Sistemas y Desarrollo de Software.</h5>
+                      <h5 class="card-subtitle mb-2 text-muted minppal1">Coordinador de Sistemas y Desarrollo de Software.</h5>
                       <p class="card-text">07/2016 – 01/2017</p>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Coordinador de Calidad de Software.</h5>
+                      <h5 class="card-subtitle mb-2 text-muted minppal2">Coordinador de Calidad de Software.</h5>
                       <p class="card-text">04/2016 – 01/2017</p>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">BQ Trading</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Programador Web.</h5>
+                      <h5 class="card-subtitle mb-2 text-muted bq-trading">Programador Web.</h5>
                       <p class="card-text">09/2015 – 02/2016</p>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">Corpovex</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Programador Web. (Comisión de Servicio)</h5>
+                      <h5 class="card-subtitle mb-2 text-muted corpovex">Programador Web. (Comisión de Servicio)</h5>
                       <p class="card-text">02/2015 – 09/2015</p>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">Corporación de Abastecimientos y Servicios Agrícolas S.A.</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Programador Web.</h5>
+                      <h5 class="card-subtitle mb-2 text-muted casa">Programador Web.</h5>
                       <p class="card-text">06/2008 – 09/2015</p>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Programador Web. (Comisión de Servicio)</h5>
+                      <h5 class="card-subtitle mb-2 text-muted minppal3">Programador Web. (Comisión de Servicio)</h5>
                       <p class="card-text">10/2013 – 03/2014</p>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-block">
                       <h4 class="card-title">Banco del Tesoro</h4>
-                      <h5 class="card-subtitle mb-2 text-muted">Programador Web. (Asesoramiento)</h5>
+                      <h5 class="card-subtitle mb-2 text-muted bancoTesoro">Programador Web. (Asesoramiento)</h5>
                       <p class="card-text">05/2010 – 05/2010</p>
                     </div>
                   </div>
@@ -357,15 +358,15 @@
             </div>
             <div id="certificados" class="row">
               <div class="col-12">
-                <h2 class="titulo">Certificados</h2>
+                <h2 class="titulo certificados">Certificados</h2>
                 <div class="info">
                   <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                       <div class="card">
                         <div class="card-block">
-                          <h4 class="card-title">Desarrollo de Servicios de Datos mediante WSO2 Lean Enterprise Middleware</h4>
-                          <h5 class="card-subtitle mb-2 text-muted">Impartido por Mijao</h5>
-                          <p class="card-text">oct. de 2013 – nov. de 2013 / Licencia J-31746535-0</p>
+                          <h4 class="card-title cert1">Desarrollo de Servicios de Datos mediante WSO2 Lean Enterprise Middleware</h4>
+                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
+                          <p class="card-text">oct. de 2013 – nov. de 2013 / RIF: J-31746535-0</p>
                           <a id="certificado1" class="btn btn-primary modal_certificado">Ver certificado</a>
                         </div>
                       </div>
@@ -373,9 +374,9 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                       <div class="card">
                         <div class="card-block">
-                          <h4 class="card-title">Modelado y Automatización de Procesos mediante Bonita BPM Fundamentos</h4>
-                          <h5 class="card-subtitle mb-2 text-muted">Impartido por Mijao</h5>
-                          <p class="card-text">oct. de 2013 – oct. de 2013 / Licencia J-31746535-0</p>
+                          <h4 class="card-title cert2">Modelado y Automatización de Procesos mediante Bonita BPM Fundamentos</h4>
+                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
+                          <p class="card-text">oct. de 2013 – oct. de 2013 / RIF: J-31746535-0</p>
                           <a id="certificado2" class="btn btn-primary modal_certificado">Ver certificado</a>
                         </div>
                       </div>
@@ -385,9 +386,9 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                       <div class="card">
                         <div class="card-block">
-                          <h4 class="card-title">Modelado de Procesos mediante la Notación Gráfica BPMN 2.0</h4>
-                          <h5 class="card-subtitle mb-2 text-muted">Impartido por Mijao</h5>
-                          <p class="card-text">sept. de 2013 – oct. de 2013  / Licencia J-31746535-0</p>
+                          <h4 class="card-title cert3">Modelado de Procesos mediante la Notación Gráfica BPMN 2.0</h4>
+                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
+                          <p class="card-text">sept. de 2013 – oct. de 2013  / RIF: J-31746535-0</p>
                           <a id="certificado3" class="btn btn-primary modal_certificado">Ver certificado</a>
                         </div>
                       </div>
@@ -395,9 +396,9 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                       <div class="card">
                         <div class="card-block">
-                          <h4 class="card-title">Análisis y Diseño de Sistemas Orientado a Objetos con UML</h4>
-                          <h5 class="card-subtitle mb-2 text-muted">Impartido por ISCA</h5>
-                          <p class="card-text">nov. de 2010 – dic. de 2010 / Licencia J-30964433-5</p>
+                          <h4 class="card-title cert4">Análisis y Diseño de Sistemas Orientado a Objetos con UML</h4>
+                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> ISCA</h5>
+                          <p class="card-text">nov. de 2010 – dic. de 2010 / RIF: J-30964433-5</p>
                           <a id="certificado4" class="btn btn-primary modal_certificado">Ver certificado</a>
                         </div>
                       </div>

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $.fn.idioma('es');
+
   //Para los tooltips
   $('[data-toggle="tooltip"]').tooltip()
 
@@ -20,7 +22,7 @@ $(document).ready(function(){
     readonly      : true,
     theme         : 'bars-movie'
   });
-//alert($(window).width())
+
   //Evento scroll sobre la ventana
   $(window).scroll(function(){
 
