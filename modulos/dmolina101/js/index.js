@@ -58,6 +58,37 @@ $(document).ready(function(){
 $.fn.eventos = function(){
 
   /*
+    Evento click sobre .idioma
+  */
+  $('.idioma').unbind('click');
+  $('.idioma').click(function(){
+
+    //Obetenemos el atributo que indica en que idioma esta
+    var idioma = $(this).attr('lang');
+
+    //Evaluamos
+    if(idioma == 'es'){
+
+      //Traducimos
+      $(this).attr('lang','en');
+      $(this).children('span').text('Español');
+      $.fn.idioma('en');
+
+    }else{
+
+      //Traducimos
+      $(this).attr('lang','es');
+      $(this).children('span').text('English');
+      $.fn.idioma('es');
+
+    }//Fin del if
+
+    $.fn.eventos();
+
+  });//Fin del evento click
+  /***********************/
+
+  /*
     Evento click sobre el link #itemsMenuPrincipal
   */
 	$('#itemsMenuPrincipal .nav-link').unbind('click');

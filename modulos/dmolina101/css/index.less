@@ -6,6 +6,7 @@
 
   .navbar-toggler{
     border: 1px solid #ffffff;
+
     &:hover{
       cursor: pointer;
     }
@@ -62,6 +63,24 @@
           color: rgba(0,0,0,0.8);
         }
 
+        &.idioma{
+
+          &:hover{
+            span{
+              border: 1px solid rgba(0,0,0,1);
+              cursor: pointer;
+            }
+          }
+
+          span{
+            border: 1px solid rgba(255,255,255,0.9);
+            border-radius: 3px;
+            padding: 0px 6px 3px 6px;
+            transition: all 0.2s;
+          }
+
+        }
+
         .fa{
           font-size: 28px;
           transition: all 0.2s;
@@ -72,7 +91,15 @@
 
     }//Fin .nav-item
 
+    @media (max-width: 360px){
+      right: 0px;
+    }
+
   }//Fin #menu_contacto
+
+  @media (max-width: 360px){
+    padding-left: 2%;
+  }
 
 }//Fin #menu_principal
 

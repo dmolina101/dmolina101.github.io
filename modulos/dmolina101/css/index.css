@@ -45,9 +45,29 @@
 #menu_principal #menu_contacto .nav-item .nav-link:hover {
   color: rgba(0, 0, 0, 0.8);
 }
+#menu_principal #menu_contacto .nav-item .nav-link.idioma:hover span {
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+#menu_principal #menu_contacto .nav-item .nav-link.idioma span {
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  padding: 0px 6px 3px 6px;
+  transition: all 0.2s;
+}
 #menu_principal #menu_contacto .nav-item .nav-link .fa {
   font-size: 28px;
   transition: all 0.2s;
+}
+@media (max-width: 360px) {
+  #menu_principal #menu_contacto {
+    right: 0px;
+  }
+}
+@media (max-width: 360px) {
+  #menu_principal {
+    padding-left: 2%;
+  }
 }
 #contenido_principal {
   background-color: rgba(0, 0, 0, 0.05);
