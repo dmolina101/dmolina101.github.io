@@ -38,6 +38,7 @@ $.fn.idioma = function(idioma){
     $('.cert2').text(data.cert2);
     $('.cert3').text(data.cert3);
     $('.cert4').text(data.cert4);
+    $('.cert5').text(data.cert5);
 
   });
 

@@ -171,6 +171,9 @@ $.fn.modal_certificado = function(id){
     case 'certificado4': var img = '<img src="modulos/dmolina101/images/certificados/1.jpg" class="img-fluid">';
                          break;
 
+    case 'certificado5': var img = '<img src="modulos/dmolina101/images/certificados/5.jpg" class="img-fluid">';
+                         break;
+
   }//Fin switch
 
   var modal = `<div class="modal fade" id="modal_certificado" tabindex="-1" role="dialog" aria-hidden="true">

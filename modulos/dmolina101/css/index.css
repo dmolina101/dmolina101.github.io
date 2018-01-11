@@ -345,15 +345,24 @@
   z-index: 99999;
 }
 #modal_certificado .modal-dialog {
+  background: none;
   min-width: 0px;
   width: auto;
   max-width: 530px;
 }
+#modal_certificado .modal-dialog .modal-content {
+  background: none;
+  border: none;
+}
 #modal_certificado .modal-dialog .modal-content .modal-header {
+  background: none;
+  border: 0px;
   height: 18px;
   padding: 3px 3px 3px 3px;
 }
 #modal_certificado .modal-dialog .modal-content .modal-header button {
+  color: white;
+  opacity: 1;
   position: absolute;
   right: 0px;
 }
