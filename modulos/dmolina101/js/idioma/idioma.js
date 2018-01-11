@@ -2,7 +2,6 @@ $.fn.idioma = function(idioma){
 
   //Obtenemos el archivo del idioma
   $.getJSON( "modulos/dmolina101/js/idioma/"+idioma+".json", function( data ) {
-    console.log(data)
 
     //Seteamos la traducciones
     $('#section_inicio').text(data.sobreMi);

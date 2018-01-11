@@ -225,6 +225,7 @@
 }
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a {
   background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   width: 17%;
 }
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(1).br-selected {
