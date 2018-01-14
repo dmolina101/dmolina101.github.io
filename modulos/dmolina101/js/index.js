@@ -168,7 +168,7 @@ $.fn.modal_certificado = function(id){
     case 'certificado3': var img = '<img src="modulos/dmolina101/images/certificados/4.jpg" class="img-fluid">';
                          break;
 
-    case 'certificado4': var img = '<img src="modulos/dmolina101/images/certificados/1.jpg" class="img-fluid">';
+    case 'certificado4': var img = '<img src="modulos/dmolina101/images/certificados/10.jpg" class="img-fluid">';
                          break;
 
     case 'certificado5': var img = '<img src="modulos/dmolina101/images/certificados/5.jpg" class="img-fluid">';
