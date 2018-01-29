@@ -17,7 +17,7 @@ $(document).ready(function(){
     theme         : 'bars-movie'
   });
 
-  $('#dynamodb, #laravel, #android, #composer').barrating({
+  $('#dynamodb, #laravel, #android, #composer, #vue, #lodash').barrating({
     initialRating : 2,
     readonly      : true,
     theme         : 'bars-movie'
