@@ -11,7 +11,7 @@ $(document).ready(function(){
     theme         : 'bars-movie'
   });
 
-  $('#mysql, #oracle, #soap, #git').barrating({
+  $('#mysql, #oracle, #soap, #git, #npm').barrating({
     initialRating : 3,
     readonly      : true,
     theme         : 'bars-movie'

@@ -288,7 +288,8 @@
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.php img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.bootstrap img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.vue img,
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.lodash img {
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.lodash img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.npm img {
   height: 28px;
   width: auto;
 }
