@@ -5,13 +5,13 @@ $(document).ready(function(){
   //Para los tooltips
   $('[data-toggle="tooltip"]').tooltip()
 
-  $('#html, #css3, #js, #less, #php, #restful, #codeigniter, #jquery, #bootstrap').barrating({
+  $('#html, #css3, #js, #less, #php, #restful, #codeigniter, #jquery, #bootstrap, #node').barrating({
     initialRating : 4,
     readonly      : true,
     theme         : 'bars-movie'
   });
 
-  $('#mysql, #node, #oracle, #soap, #git').barrating({
+  $('#mysql, #oracle, #soap, #git').barrating({
     initialRating : 3,
     readonly      : true,
     theme         : 'bars-movie'
