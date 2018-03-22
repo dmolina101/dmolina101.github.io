@@ -11,13 +11,13 @@ $(document).ready(function(){
     theme         : 'bars-movie'
   });
 
-  $('#mysql, #oracle, #soap, #git, #npm').barrating({
+  $('#mysql, #oracle, #soap, #git, #npm, #aws, #dynamodb, #serverless').barrating({
     initialRating : 3,
     readonly      : true,
     theme         : 'bars-movie'
   });
 
-  $('#dynamodb, #laravel, #android, #composer, #vue, #lodash').barrating({
+  $('#laravel, #android, #composer, #vue, #lodash').barrating({
     initialRating : 2,
     readonly      : true,
     theme         : 'bars-movie'

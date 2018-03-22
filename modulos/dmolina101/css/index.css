@@ -289,12 +289,14 @@
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.bootstrap img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.vue img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.lodash img,
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.npm img {
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.npm img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.aws img {
   height: 28px;
   width: auto;
 }
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.soap img,
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.restful img {
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.restful img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.serverless img {
   height: 20px;
   width: auto;
 }
