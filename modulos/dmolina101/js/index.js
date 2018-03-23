@@ -17,7 +17,7 @@ $(document).ready(function(){
     theme         : 'bars-movie'
   });
 
-  $('#laravel, #android, #composer, #vue, #lodash').barrating({
+  $('#laravel, #android, #composer, #vue, #lodash, #heroku').barrating({
     initialRating : 2,
     readonly      : true,
     theme         : 'bars-movie'

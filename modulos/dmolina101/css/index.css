@@ -303,7 +303,8 @@
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.codeigniter img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.laravel img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.jquery img,
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.git img {
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.git img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.heroku img {
   height: 25px;
   width: auto;
 }
