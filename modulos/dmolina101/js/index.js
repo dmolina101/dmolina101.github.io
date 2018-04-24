@@ -3,25 +3,9 @@ $(document).ready(function(){
   $.fn.idioma('es');
 
   //Para los tooltips
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 
-  $('#html, #css3, #js, #less, #php, #restful, #codeigniter, #jquery, #bootstrap, #node').barrating({
-    initialRating : 4,
-    readonly      : true,
-    theme         : 'bars-movie'
-  });
-
-  $('#mysql, #oracle, #soap, #git, #npm, #aws, #dynamodb, #serverless').barrating({
-    initialRating : 3,
-    readonly      : true,
-    theme         : 'bars-movie'
-  });
-
-  $('#laravel, #android, #composer, #vue, #lodash, #heroku').barrating({
-    initialRating : 2,
-    readonly      : true,
-    theme         : 'bars-movie'
-  });
+  $.fn.rating();
 
   //Evento scroll sobre la ventana
   $(window).scroll(function(){
@@ -209,3 +193,51 @@ $.fn.modal_certificado = function(id){
 	$('#modal_certificado').modal('show');
 
 };//Fin de la función modal_certificado
+
+/*
+  Función que muestra el rating de cada habilidad
+*/
+$.fn.rating = () => {
+
+  //Recorremos cada uno de los elementos que deben
+  //de poseer un rating
+  $('.rating').each((indice, elemento) => {
+
+    //Obtenemos valores
+    let ratingVal    = parseInt($(elemento).attr('rating-value'));
+    let ratingTarget = $(elemento).find('select');
+    const ratingDesc   = (ratingVal) => {
+
+      var desc;
+
+      switch (ratingVal) {
+        case 1:
+          desc = 'pesimo';
+          break;
+        case 2:
+          desc = 'regular';
+          break;
+        case 3:
+          desc = 'bueno';
+          break;
+        case 4:
+          desc = 'excelente';
+          break;
+        default:
+          desc = 'pesimo';
+      }
+
+      return desc;
+
+    }//Fin ratingDesc
+
+    ratingTarget.addClass(ratingDesc(ratingVal))
+    ratingTarget.barrating({
+      initialRating : ratingVal,
+      readonly      : true,
+      theme         : 'bars-movie'
+    });
+
+  });//Fin each
+
+};//Fin de la función $.fn.rating
