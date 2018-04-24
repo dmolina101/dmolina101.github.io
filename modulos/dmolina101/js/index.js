@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(() => {
 
   $.fn.idioma('es');
 
@@ -8,7 +8,7 @@ $(document).ready(function(){
   $.fn.rating();
 
   //Evento scroll sobre la ventana
-  $(window).scroll(function(){
+  $(window).scroll(() => {
 
     //Removemos los tooltips activos
     $('.tooltip').remove();
@@ -39,30 +39,30 @@ $(document).ready(function(){
 /*
   Función donde se declaran todos los eventos
 */
-$.fn.eventos = function(){
+$.fn.eventos = () => {
 
   /*
     Evento click sobre .idioma
   */
   $('.idioma').unbind('click');
-  $('.idioma').click(function(){
+  $('.idioma').click((e) => {
 
     //Obetenemos el atributo que indica en que idioma esta
-    var idioma = $(this).attr('lang');
+    let idioma = $(e.target).parent().attr('lang');
 
     //Evaluamos
     if(idioma == 'es'){
 
       //Traducimos
-      $(this).attr('lang','en');
-      $(this).children('span').text('Español');
+      $(e.target).parent().attr('lang','en');
+      $(e.target).text('Español');
       $.fn.idioma('en');
 
     }else{
 
       //Traducimos
-      $(this).attr('lang','es');
-      $(this).children('span').text('English');
+      $(e.target).parent().attr('lang','es');
+      $(e.target).text('English');
       $.fn.idioma('es');
 
     }//Fin del if
@@ -76,10 +76,10 @@ $.fn.eventos = function(){
     Evento click sobre el link #itemsMenuPrincipal
   */
 	$('#itemsMenuPrincipal .nav-link').unbind('click');
-	$('#itemsMenuPrincipal .nav-link').click(function(){
+	$('#itemsMenuPrincipal .nav-link').click((e) => {
 
     //Obtenemos el id
-    var id = $(this).attr('id');
+    let id = $(e.target).attr('id');
 
     switch(id){
 
@@ -100,7 +100,7 @@ $.fn.eventos = function(){
     //Evaluamos el dispositivo
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)){
 
-      setTimeout(function() {
+      setTimeout(() => {
 
         window.scrollTo(0,top);
 
@@ -122,10 +122,10 @@ $.fn.eventos = function(){
     Evento click sobre .modal_certificado
   */
   $('.modal_certificado').unbind('click');
-  $('.modal_certificado').click(function(){
+  $('.modal_certificado').click((e) => {
 
     //Obtenemos el id
-    var id = $(this).attr('id');
+    let id = $(e.target).attr('id');
 
     $.fn.modal_certificado(id);
 
@@ -139,7 +139,7 @@ $.fn.eventos = function(){
 /*
   Función que arma la modal para mostrar los certificados
 */
-$.fn.modal_certificado = function(id){
+$.fn.modal_certificado = (id) => {
 
   switch(id){
 
