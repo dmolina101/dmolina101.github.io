@@ -474,3 +474,223 @@
 	}//Fin .modal-dialog
 
 }//Fin #modal_certificado
+
+.wrapperContPdf{
+  left: -5000px;
+  position: fixed;
+  top: 100px;
+  width: 100%;
+
+  .img1,
+  .img2{
+    background-color: rgb(242,242,242);
+    padding-top: 50px;
+
+    &.img1{
+      height: 1900px;
+    }
+
+    &.img2{
+      height: 2200px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+  }
+
+  .wrapper_mePDF{
+
+    .avatar{
+      width: 40%;
+
+    }//Fin .avatar
+
+    .titulo{
+      color: rgba(0,0,0,0.6);
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+
+    }//Fin .titulo
+
+    .subtitulo{
+      color: rgba(0,0,0,0.6);
+      font-size: 23px;
+      text-align: center;
+
+    }//Fin .subtitulo
+
+    .info{
+      color: rgba(0,0,0,0.6);
+      font-size: 17px;
+      text-align: center;
+
+      .pais{
+        height: auto;
+        margin-top: -5px;
+        width: 23px;
+      }//Fin .pais
+
+    }//Fin .info
+
+  }//Fin .wrapper_me
+
+  .wrapper_section{
+
+    > .row{
+      margin-left: 0px;
+      margin-right: 0px;
+
+      > div[class*='col-']{
+        padding-left: 0px;
+        padding-right: 20px;
+
+        .titulo{
+          color:#3399ff;
+        }
+
+        .info{
+          background-color: #ffffff;
+          border-radius: 4px;
+          margin-bottom: 50px;
+          padding: 20px;
+
+          .rating{
+            margin-bottom: 50px;
+            padding-left: 100px;
+
+            .br-widget{
+              width: 100%;
+
+              a{
+                background-color: rgba(0,0,0,0.1);
+                border:1px solid rgba(0,0,0,0.15);
+
+                width: 17%;
+
+                &:nth-child(1){
+                  &.br-selected{
+                    background-color: #e01f2f;
+                  }
+                }
+
+                &:nth-child(2){
+                  &.br-selected{
+                    background-color: #ed9004;
+                  }
+                }
+
+                &:nth-child(3){
+                  &.br-selected{
+                    background-color: #f3f709;
+                  }
+                }
+
+                &:nth-child(4){
+                  &.br-selected{
+                    background-color: #3af202;
+                  }
+                }
+
+              }//Fin a
+
+              .br-current-rating{
+                color: rgba(0,0,0,0.7);
+                font-weight: bold;
+                text-align: left;
+                width: 100%;
+              }
+
+            }//Fin .br-widget
+
+            &.html,
+            &.css,
+            &.js,
+            &.mysql,
+            &.node,
+            &.android,
+            &.composer{
+              img{
+                height: 30px;
+                width: auto;
+              }
+            }
+
+            &.less{
+              img{
+                height: 22px;
+                width: auto;
+              }
+            }
+
+            &.oracle{
+              img{
+                height: 15px;
+                width: auto;
+              }
+            }
+
+            &.dynamodb,
+            &.php,
+            &.bootstrap,
+            &.vue,
+            &.lodash,
+            &.npm,
+            &.aws{
+              img{
+                height: 28px;
+                width: auto;
+              }
+            }
+
+            &.soap,
+            &.restful,
+            &.serverless{
+              img{
+                height: 20px;
+                width: auto;
+              }
+            }
+
+            &.codeigniter,
+            &.laravel,
+            &.jquery,
+            &.git,
+            &.heroku,
+            &.react{
+              img{
+                height: 25px;
+                width: auto;
+              }
+            }
+
+          }//Fin .rating
+
+          .card{
+            border-color: rgba(51,153,255,0.35);
+            margin-bottom: 15px;
+
+            .modal_certificado{
+              background-color:rgba(51,153,255,1);
+              color: #ffffff;
+              transition: all 0.3s;
+
+              &:hover{
+                background-color: rgba(0,0,0,1);
+                border-color: rgba(0,0,0,0.9);
+                cursor: pointer;
+              }
+
+            }
+
+          }//Fin .card
+
+        }//Fin .info
+
+      }//Fin > div[class*='col-']
+
+    }//Fin >.row
+
+  }//Fin .wrapper_section
+
+}//Fin .wrapperContPdf
