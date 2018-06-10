@@ -381,3 +381,152 @@
   border-color: rgba(0, 0, 0, 0);
   padding: 0px;
 }
+.wrapperContPdf {
+  left: -5000px;
+  position: fixed;
+  top: 100px;
+  width: 100%;
+}
+.wrapperContPdf .img1,
+.wrapperContPdf .img2 {
+  background-color: #f2f2f2;
+  padding-top: 50px;
+}
+.wrapperContPdf .img1.img1,
+.wrapperContPdf .img2.img1 {
+  height: 1900px;
+}
+.wrapperContPdf .img1.img2,
+.wrapperContPdf .img2.img2 {
+  height: 2200px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.wrapperContPdf .wrapper_mePDF .avatar {
+  width: 40%;
+}
+.wrapperContPdf .wrapper_mePDF .titulo {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.wrapperContPdf .wrapper_mePDF .subtitulo {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 23px;
+  text-align: center;
+}
+.wrapperContPdf .wrapper_mePDF .info {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 17px;
+  text-align: center;
+}
+.wrapperContPdf .wrapper_mePDF .info .pais {
+  height: auto;
+  margin-top: -5px;
+  width: 23px;
+}
+.wrapperContPdf .wrapper_section > .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .titulo {
+  color: #3399ff;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info {
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating {
+  margin-bottom: 50px;
+  padding-left: 100px;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget {
+  width: 100%;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  width: 17%;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(1).br-selected {
+  background-color: #e01f2f;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(2).br-selected {
+  background-color: #ed9004;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(3).br-selected {
+  background-color: #f3f709;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget a:nth-child(4).br-selected {
+  background-color: #3af202;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating .br-widget .br-current-rating {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.html img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.css img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.js img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.mysql img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.node img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.android img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.composer img {
+  height: 30px;
+  width: auto;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.less img {
+  height: 22px;
+  width: auto;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.oracle img {
+  height: 15px;
+  width: auto;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.dynamodb img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.php img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.bootstrap img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.vue img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.lodash img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.npm img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.aws img {
+  height: 28px;
+  width: auto;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.soap img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.restful img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.serverless img {
+  height: 20px;
+  width: auto;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.codeigniter img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.laravel img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.jquery img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.git img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.heroku img,
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .rating.react img {
+  height: 25px;
+  width: auto;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .card {
+  border-color: rgba(51, 153, 255, 0.35);
+  margin-bottom: 15px;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .card .modal_certificado {
+  background-color: #3399ff;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.wrapperContPdf .wrapper_section > .row > div[class*='col-'] .info .card .modal_certificado:hover {
+  background-color: #000000;
+  border-color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}

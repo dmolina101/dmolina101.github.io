@@ -75,8 +75,8 @@ $.fn.eventos = () => {
   /*
     Evento click sobre el link #itemsMenuPrincipal
   */
-	$('#itemsMenuPrincipal .nav-link').unbind('click');
-	$('#itemsMenuPrincipal .nav-link').click((e) => {
+	$('#itemsMenuPrincipal .link').unbind('click');
+	$('#itemsMenuPrincipal .link').click((e) => {
 
     //Obtenemos el id
     let id = $(e.target).attr('id');
@@ -95,27 +95,65 @@ $.fn.eventos = () => {
       case 'section_certificados': var top = $('#certificados').offset().top - 60;
                                    break;
 
+      default: var top = 'none';
+
     }//Fin del switch
 
-    //Evaluamos el dispositivo
-    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)){
+    if(top !== 'none'){
 
-      setTimeout(() => {
+      //Evaluamos el dispositivo
+      if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)){
 
-        window.scrollTo(0,top);
+        setTimeout(() => {
 
-      }, 700);
+          window.scrollTo(0,top);
 
-    }else{
+        }, 700);
 
-      $("html")
-      .animate({ scrollTop: top}, 700);
+      }else{
 
-    }//Fin del if
+        $("html")
+        .animate({ scrollTop: top}, 700);
+
+      }//Fin del if
+
+    }
 
 		$.fn.eventos();
 
 	});//Fin del evento click
+  /***********************/
+
+  /*
+    Evento click sobre #imprimir_cv
+  */
+  $('#imprimir_cv').unbind('click');
+  $('#imprimir_cv').click(function(){
+
+    //Obetenemos el atributo que indica en que idioma esta
+    let idioma = $('.idioma').attr('lang');
+
+    const pdf = new jsPDF('p', 'mm', "a4");
+
+    html2canvas($('.wrapperContPdf .img1')[0]).then(canvas => {
+
+      let canvasImg = canvas.toDataURL("image/jpg");
+      pdf.addImage(canvasImg, 'JPEG', 0, 0, 210, 297);
+      pdf.addPage();
+
+      html2canvas($('.wrapperContPdf .img2')[0]).then(canvas => {
+
+        let canvasImg = canvas.toDataURL("image/jpg");
+        pdf.addImage(canvasImg, 'JPEG', 0, 0, 210, 300);
+        pdf.save('dmolina101_cv.pdf');
+
+      });
+
+    });
+
+    $.fn.eventos();
+
+  });//Fin del evento click
   /***********************/
 
   /*

@@ -8,12 +8,14 @@ $.fn.idioma = function(idioma){
     $('#section_habilidades').text(data.habilidades);
     $('#section_experiencia').text(data.expLaboral);
     $('#section_certificados').text(data.certificados);
+    $('#imprimir_cv').text(data.imprimirCv);
 
-    $('#programador').text(data.programador);
+    $('.programador').text(data.programador);
     $('#universidad').html(data.universidad);
 
     $('.sobreMi').text(data.sobreMi);
     $('.infoSobreMi').html(data.infoSobreMi);
+    $('.wrapperContPdf .infoSobreMi').html(data.infoSobreMiPDF);
 
     $('.habilidades').text(data.habilidades);
     $('.pesimo').parent('.br-wrapper').find('.br-current-rating').text(data.pesimo);
