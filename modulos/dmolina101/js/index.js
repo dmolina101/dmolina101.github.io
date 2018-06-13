@@ -137,8 +137,11 @@ $.fn.eventos = () => {
 
     html2canvas($('.wrapperContPdf .img1')[0]).then(canvas => {
 
+      var pdfWidth  = ($(window).width() > 971) ? 297 : 297;
+      var pdfHeight = 210;
+alert(pdfHeight+' '+pdfWidth)
       let canvasImg = canvas.toDataURL("image/jpg");
-      pdf.addImage(canvasImg, 'JPEG', 0, 0, 210, 297);
+      pdf.addImage(canvasImg, 'JPEG', 0, 0, pdfHeight, pdfWidth);
       pdf.addPage();
 
       html2canvas($('.wrapperContPdf .img2')[0]).then(canvas => {
