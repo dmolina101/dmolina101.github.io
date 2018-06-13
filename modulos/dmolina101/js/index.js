@@ -134,10 +134,14 @@ $.fn.eventos = () => {
     let idioma = $('.idioma').attr('lang');
 
     const pdf = new jsPDF('p', 'mm', "a4");
+    const opciones = {
+      height: 1710,
+      width: 1400
+    };
 
-    html2canvas($('.wrapperContPdf .img1')[0]).then(canvas => {
+    html2canvas($('.wrapperContPdf .img1')[0],opciones).then(canvas => {
 
-      var pdfWidth  = ($(window).width() > 974) ? 302 : 305;
+      var pdfWidth  = 280;//($(window).width() > 974) ? 280 : 305;
       var pdfHeight = 210;
 
       let canvasImg = canvas.toDataURL("image/jpg");

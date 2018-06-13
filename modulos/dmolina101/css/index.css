@@ -364,7 +364,7 @@
 #modal_certificado .modal-dialog .modal-content .modal-header {
   background: none;
   border: 0px;
-  height: 18px;
+  height: 28px;
   padding: 3px 3px 3px 3px;
 }
 #modal_certificado .modal-dialog .modal-content .modal-header button {
@@ -391,24 +391,19 @@
 .wrapperContPdf .img2 {
   background-color: #f2f2f2;
   padding-top: 50px;
-  width: 1400px;
 }
 .wrapperContPdf .img1.img1,
 .wrapperContPdf .img2.img1 {
-  height: 1900px;
-}
-@media (max-width: 991px) {
-  .wrapperContPdf .img1.img1,
-  .wrapperContPdf .img2.img1 {
-    height: 2100px;
-  }
-}
-@media (max-width: 900px) {
-  .wrapperContPdf .img1.img1,
-  .wrapperContPdf .img2.img1 {
-    border: 2px solid red;
-    height: 2900px;
-  }
+  /*height: 1900px;
+
+      @media (max-width: 991px){
+        height: 2100px;
+      }
+
+      @media (max-width: 900px){
+        border: 2px solid red;
+        height: 2900px;
+      }*/
 }
 .wrapperContPdf .img1.img2,
 .wrapperContPdf .img2.img2 {
