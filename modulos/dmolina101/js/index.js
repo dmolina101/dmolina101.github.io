@@ -134,24 +134,20 @@ $.fn.eventos = () => {
     let idioma = $('.idioma').attr('lang');
 
     const pdf = new jsPDF('p', 'mm', "a4");
-    const opciones = {
-      height: 1710,
-      width: 1400
-    };
 
-    html2canvas($('.wrapperContPdf .img1')[0],opciones).then(canvas => {
+    html2canvas($('.wrapperContPdf .img1')[0]).then(canvas => {
 
-      var pdfWidth  = 280;//($(window).width() > 974) ? 280 : 305;
-      var pdfHeight = 210;
+      var pdfWidth  = 210;
+      var pdfHeight = 298;
 
       let canvasImg = canvas.toDataURL("image/jpg");
-      pdf.addImage(canvasImg, 'JPEG', 0, 0, pdfHeight, pdfWidth);
+      pdf.addImage(canvasImg, 'JPEG', 0, 0, pdfWidth, pdfHeight);
       pdf.addPage();
 
       html2canvas($('.wrapperContPdf .img2')[0]).then(canvas => {
 
         let canvasImg = canvas.toDataURL("image/jpg");
-        pdf.addImage(canvasImg, 'JPEG', 0, 0, 210, 300);
+        pdf.addImage(canvasImg, 'JPEG', 0, 0, 215, 300);
         pdf.save('dmolina101_cv.pdf');
 
       });

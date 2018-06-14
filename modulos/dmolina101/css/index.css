@@ -385,7 +385,8 @@
   left: -5000px;
   min-width: 1400px;
   position: fixed;
-  width: 1400px;
+  top: 0px;
+  width: 1400px !important;
 }
 .wrapperContPdf .img1,
 .wrapperContPdf .img2 {
@@ -394,15 +395,11 @@
 }
 .wrapperContPdf .img1.img1,
 .wrapperContPdf .img2.img1 {
-  /*height: 1900px;
-
-      @media (max-width: 991px){
-        height: 2100px;
-      }
-
-      @media (max-width: 900px){
-        border: 2px solid red;
-        height: 2900px;
+  height: 1950px;
+  /*  @media (max-width: 585px){
+        border: 3px solid red;
+        height: 3000px;
+        width: 2100px;
       }*/
 }
 .wrapperContPdf .img1.img2,
