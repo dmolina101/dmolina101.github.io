@@ -141,13 +141,13 @@ $.fn.eventos = () => {
       var pdfHeight = 298;
 
       let canvasImg = canvas.toDataURL("image/jpg");
-      pdf.addImage(canvasImg, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+      pdf.addImage(canvasImg, 'JPEG', 0, 0, pdfWidth, pdfHeight, '', 'FAST');
       pdf.addPage();
 
       html2canvas($('.wrapperContPdf .img2')[0]).then(canvas => {
 
         let canvasImg = canvas.toDataURL("image/jpg");
-        pdf.addImage(canvasImg, 'JPEG', 0, 0, 215, 300);
+        pdf.addImage(canvasImg, 'JPEG', 0, 0, 215, 300, '', 'FAST');
         pdf.save('dmolina101_cv.pdf');
 
       });
