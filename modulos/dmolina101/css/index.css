@@ -272,7 +272,8 @@
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.mysql img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.node img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.android img,
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.composer img {
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.composer img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.postgresql img {
   height: 30px;
   width: auto;
 }
@@ -290,7 +291,8 @@
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.vue img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.lodash img,
 #contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.npm img,
-#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.aws img {
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.aws img,
+#contenido_principal .wrapper_section > .row > div[class*='col-'] .info .rating.nextjs img {
   height: 28px;
   width: auto;
 }
