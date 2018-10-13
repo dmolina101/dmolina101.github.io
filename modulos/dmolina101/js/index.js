@@ -55,14 +55,14 @@ $.fn.eventos = () => {
 
       //Traducimos
       $(e.target).parent().attr('lang','en');
-      $(e.target).text('Español');
+      $(e.target).text('EN');
       $.fn.idioma('en');
 
     }else{
 
       //Traducimos
       $(e.target).parent().attr('lang','es');
-      $(e.target).text('English');
+      $(e.target).text('ES');
       $.fn.idioma('es');
 
     }//Fin del if

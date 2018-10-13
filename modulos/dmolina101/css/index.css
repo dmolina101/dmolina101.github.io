@@ -55,7 +55,7 @@
   padding: 0px 6px 3px 6px;
   transition: all 0.2s;
 }
-#menu_principal #menu_contacto .nav-item .nav-link .fa {
+#menu_principal #menu_contacto .nav-item .nav-link svg {
   font-size: 28px;
   transition: all 0.2s;
 }
