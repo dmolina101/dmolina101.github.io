@@ -5,582 +5,72 @@
     <title>David Molina</title>
     <meta charset="UTF-8" http-equiv="Content-Language" content="es"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="modulos/bootstrap-4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="modulos/bootstrap-4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="modulos/jquery-bar-rating/dist/themes/bars-movie.css">
     <link rel="stylesheet" href="modulos/dmolina101/css/index.css">
 
   </head>
   <body>
 
-    <nav id="menu_principal" class="navbar navbar-expand-lg fixed-top">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#itemsMenuPrincipal" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div id="app">
 
-      <div class="collapse navbar-collapse" id="itemsMenuPrincipal">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a id="section_inicio" class="nav-link link">Sobre Mí</a>
+      <nav id="menu_principal" class="navbar navbar-expand-lg fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#itemsMenuPrincipal" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="itemsMenuPrincipal">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item" v-for="menu in menuPrincipal">
+              <a class="nav-link link" v-on:click="irSeccion">{{ menu.text }}</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul id="menu_contacto">
+          <li class="nav-item" v-for="menu in menuContacto">
+            <a class="nav-link" data-toggle="tooltip" data-placement="bottom" v-bind:title="menu.titulo" v-bind:href="menu.href" target="_blank">
+              <i v-bind:class="menu.icono"></i>
+            </a>
           </li>
           <li class="nav-item">
-            <a id="section_habilidades" class="nav-link link">Habilidades</a>
-          </li>
-          <li class="nav-item">
-            <a id="section_experiencia" class="nav-link link">Experiencia Laboral</a>
-          </li>
-          <li class="nav-item">
-            <a id="section_certificados" class="nav-link link">Certificados</a>
-          </li>
-          <li class="nav-item">
-            <a id="imprimir_cv" class="nav-link">Imprimir CV</a>
+            <a class="nav-link idioma" v-on:click="idioma">
+              <span class="text-uppercase" v-bind:data-lang="idiomActivo">{{ idiomActivo }}</span>
+            </a>
           </li>
         </ul>
-      </div>
+      </nav>
 
-      <ul id="menu_contacto">
-        <li class="nav-item">
-          <a class="nav-link linkedin" data-toggle="tooltip" data-placement="bottom" title="Linkedin" href="https://www.linkedin.com/in/david-leonardo-molina-ruíz-1254a9152" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link youtube" data-toggle="tooltip" data-placement="bottom" title="Youtube" href="https://www.youtube.com/channel/UClEs4lNMd2Raxyc0N1W9jqw/featured" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link github" data-toggle="tooltip" data-placement="bottom" title="Github" href="https://github.com/dmolina101" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link stackoverflow" data-toggle="tooltip" data-placement="bottom" title="Stackoverflow" href="https://es.stackoverflow.com/users/95526/david-leonardo-molina-ruiz-dav?tab=profile" target="_blank">
-            <i class="fab fa-stack-overflow"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link idioma" lang="es">
-            <span>ES</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <div id="contenido_principal" class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-sm-4">
-          <div class="wrapper_me">
-            <img src="modulos/dmolina101/images/yo.jpg" class="img-thumbnail mx-auto d-block avatar">
-            <div class="titulo">David L. Molina Ruíz</div>
-            <div class="subtitulo">Curriculum Vitae</div>
-            <div class="info">
-              <i class="fas fa-code"></i>
-              <span class="programador"></span>
-            </div>
-            <div class="info">
-              <i class="far fa-calendar-alt"></i>
-              05/08/1986
-            </div>
-            <div class="info">
-              <i class="far fa-envelope"></i>
-              dmolina101@gmail.com
-            </div>
-            <div class="info">
-              <i class="fas fa-graduation-cap"></i>
-              <span class="universidad">Universidad Bolivariana </br> de Venezuela 2004 - 2010</span>
-            </div>
-            <div class="info">
-              <img src="modulos/dmolina101/images/ve.png" class="pais">
-              Caracas - Venezuela
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-8">
-          <div class="wrapper_section">
-
-            <div id="sobre_mi" class="row">
-              <div class="col-12">
-
-                <h2 class="titulo sobreMi"></h2>
-                <div class="info infoSobreMi"></div>
-
-              </div>
-            </div>
-            <div id="skills" class="row">
-              <div class="col-12">
-
-                <h2 class="titulo habilidades"></h2>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating html" rating-value="4">
-                      <img src="modulos/dmolina101/images/html.jpg" data-toggle="tooltip" data-placement="bottom" title="Html5">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating css" rating-value="4">
-                      <img src="modulos/dmolina101/images/css.jpg" data-toggle="tooltip" data-placement="bottom" title="CSS3">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating js" rating-value="4">
-                      <img src="modulos/dmolina101/images/js.jpg" data-toggle="tooltip" data-placement="bottom" title="JS">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating mysql" rating-value="4">
-                      <img src="modulos/dmolina101/images/mysql.jpg" data-toggle="tooltip" data-placement="bottom" title="MySql">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating node" rating-value="4">
-                      <img src="modulos/dmolina101/images/node.jpg" data-toggle="tooltip" data-placement="bottom" title="NodeJS">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating less" rating-value="4">
-                      <img src="modulos/dmolina101/images/less.jpg" data-toggle="tooltip" data-placement="bottom" title="Less">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating oracle" rating-value="4">
-                      <img src="modulos/dmolina101/images/oracle.jpg" data-toggle="tooltip" data-placement="bottom" title="Oracle">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating dynamodb" rating-value="3">
-                      <img src="modulos/dmolina101/images/dynamodb.jpg" data-toggle="tooltip" data-placement="bottom" title="DynamoDB">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating postgresql" rating-value="3">
-                      <img src="modulos/dmolina101/images/postgresql.jpg" data-toggle="tooltip" data-placement="bottom" title="Postgresql">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating nextjs" rating-value="3">
-                      <img src="modulos/dmolina101/images/nextjs.jpg" data-toggle="tooltip" data-placement="bottom" title="NextJS">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating php" rating-value="4">
-                      <img src="modulos/dmolina101/images/php.jpg" data-toggle="tooltip" data-placement="bottom" title="PHP">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating bootstrap" rating-value="4">
-                      <img src="modulos/dmolina101/images/bootstrap.jpg" data-toggle="tooltip" data-placement="bottom" title="Bootstrap">
-                      <select>
-                        <option value="1" class="pesimo">Pésimo</option>
-                        <option value="2" class="regular">Regular</option>
-                        <option value="3" class="bueno">Bueno</option>
-                        <option value="4" class="excelente">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating soap" rating-value="4">
-                      <img src="modulos/dmolina101/images/soap.jpg" data-toggle="tooltip" data-placement="bottom" title="SOAP">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating restful" rating-value="4">
-                      <img src="modulos/dmolina101/images/restful.jpg" data-toggle="tooltip" data-placement="bottom" title="RESTful">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating codeigniter" rating-value="4">
-                      <img src="modulos/dmolina101/images/codeigniter.jpg" data-toggle="tooltip" data-placement="bottom" title="Codeigniter">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating laravel" rating-value="2">
-                      <img src="modulos/dmolina101/images/laravel.jpg" data-toggle="tooltip" data-placement="bottom" title="Laravel">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating android" rating-value="2">
-                      <img src="modulos/dmolina101/images/android.jpg" data-toggle="tooltip" data-placement="bottom" title="Android">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating jquery" rating-value="4">
-                      <img src="modulos/dmolina101/images/jquery.jpg" data-toggle="tooltip" data-placement="bottom" title="Jquery">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating git" rating-value="4">
-                      <img src="modulos/dmolina101/images/git.jpg" data-toggle="tooltip" data-placement="bottom" title="Git">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating composer" rating-value="3">
-                      <img src="modulos/dmolina101/images/composer.jpg" data-toggle="tooltip" data-placement="bottom" title="Composer">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating lodash" rating-value="4">
-                      <img src="modulos/dmolina101/images/lodash.png" data-toggle="tooltip" data-placement="bottom" title="Lodash">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating vue" rating-value="3">
-                      <img src="modulos/dmolina101/images/vue.png" data-toggle="tooltip" data-placement="bottom" title="Vue js">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating npm" rating-value="4">
-                      <img src="modulos/dmolina101/images/npm.jpg" data-toggle="tooltip" data-placement="bottom" title="Node Package Manager">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating aws" rating-value="3">
-                      <img src="modulos/dmolina101/images/aws.jpg" data-toggle="tooltip" data-placement="bottom" title="Amazon Web Services">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating serverless" rating-value="3">
-                      <img src="modulos/dmolina101/images/serverless.jpg" data-toggle="tooltip" data-placement="bottom" title="Serverless">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6 rating heroku" rating-value="2">
-                      <img src="modulos/dmolina101/images/heroku.jpg" data-toggle="tooltip" data-placement="bottom" title="Heroku">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-6 rating react" rating-value="4">
-                      <img src="modulos/dmolina101/images/react.jpg" data-toggle="tooltip" data-placement="bottom" title="React JS">
-                      <select>
-                        <option value="1">Pésimo</option>
-                        <option value="2">Regular</option>
-                        <option value="3">Bueno</option>
-                        <option value="4">Excelente</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-sm-6"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="experiencia" class="row">
-              <div class="col-12">
-                <h2 class="titulo experiencia">Experiencia Laboral</h2>
-                <div class="info">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Stacksavings</h4>
-                      <h5 class="card-subtitle mb-2 text-muted stacksavings">Programador JavaScript/NodeJS.</h5>
-                      <p class="card-text">12/2017 – Presente</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Técnologia Creativa A&R</h4>
-                      <h5 class="card-subtitle mb-2 text-muted tecCreativa">Programador Web y Lider de Proyecto.</h5>
-                      <p class="card-text">01/2017 – 03/2018</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                      <h5 class="card-subtitle mb-2 text-muted minppal1">Coordinador de Sistemas y Desarrollo de Software.</h5>
-                      <p class="card-text">07/2016 – 01/2017</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                      <h5 class="card-subtitle mb-2 text-muted minppal2">Coordinador de Calidad de Software.</h5>
-                      <p class="card-text">04/2016 – 01/2017</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">BQ Trading</h4>
-                      <h5 class="card-subtitle mb-2 text-muted bq-trading">Programador Web.</h5>
-                      <p class="card-text">09/2015 – 02/2016</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Corpovex</h4>
-                      <h5 class="card-subtitle mb-2 text-muted corpovex">Programador Web. (Comisión de Servicio)</h5>
-                      <p class="card-text">02/2015 – 09/2015</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Corporación de Abastecimientos y Servicios Agrícolas S.A.</h4>
-                      <h5 class="card-subtitle mb-2 text-muted casa">Programador Web.</h5>
-                      <p class="card-text">06/2008 – 09/2015</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                      <h5 class="card-subtitle mb-2 text-muted minppal3">Programador Web. (Comisión de Servicio)</h5>
-                      <p class="card-text">10/2013 – 03/2014</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Banco del Tesoro</h4>
-                      <h5 class="card-subtitle mb-2 text-muted bancoTesoro">Programador Web. (Asesoramiento)</h5>
-                      <p class="card-text">05/2010 – 05/2010</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="certificados" class="row">
-              <div class="col-12">
-                <h2 class="titulo certificados">Certificados</h2>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <h4 class="card-title cert5">Desarrollo de Servicios de Decisión mediante WSO2 Bussines Rules Server y JBoss Drools</h4>
-                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                          <p class="card-text">nov. de 2013 – nov. de 2013 / RIF: J-31746535-0</p>
-                          <a id="certificado5" class="btn btn-primary modal_certificado">Ver certificado</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <h4 class="card-title cert1">Desarrollo de Servicios de Datos mediante WSO2 Lean Enterprise Middleware</h4>
-                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                          <p class="card-text">oct. de 2013 – nov. de 2013 / RIF: J-31746535-0</p>
-                          <a id="certificado1" class="btn btn-primary modal_certificado">Ver certificado</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <h4 class="card-title cert2">Modelado y Automatización de Procesos mediante Bonita BPM Fundamentos</h4>
-                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                          <p class="card-text">oct. de 2013 – oct. de 2013 / RIF: J-31746535-0</p>
-                          <a id="certificado2" class="btn btn-primary modal_certificado">Ver certificado</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <h4 class="card-title cert3">Modelado de Procesos mediante la Notación Gráfica BPMN 2.0</h4>
-                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                          <p class="card-text">sept. de 2013 – oct. de 2013  / RIF: J-31746535-0</p>
-                          <a id="certificado3" class="btn btn-primary modal_certificado">Ver certificado</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <h4 class="card-title cert4">Análisis y Diseño de Sistemas Orientado a Objetos con UML</h4>
-                          <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> ISCA</h5>
-                          <p class="card-text">nov. de 2010 – dic. de 2010 / RIF: J-30964433-5</p>
-                          <a id="certificado4" class="btn btn-primary modal_certificado">Ver certificado</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrapperContPdf">
-
-      <div class="img1">
-
+      <div id="contenido_principal" class="container-fluid">
         <div class="row">
-          <div class="col-4">
-            <div class="wrapper_mePDF">
+
+          <div class="col-12 col-sm-4">
+            <div class="wrapper_me">
               <img src="modulos/dmolina101/images/yo.jpg" class="img-thumbnail mx-auto d-block avatar">
-              <div class="titulo">David L. Molina Ruíz</div>
-              <div class="subtitulo">Curriculum Vitae</div>
-              <div class="info">
-                <i class="fas fa-code"></i>
-                <span class="programador"></span>
-              </div>
-              <div class="info">
-                <i class="far fa-calendar-alt"></i>
-                05/08/1986
-              </div>
-              <div class="info">
-                <i class="far fa-envelope"></i>
-                dmolina101@gmail.com
-              </div>
-              <div class="info">
-                <i class="fas fa-graduation-cap"></i>
-                <span class="universidad">Universidad Bolivariana </br> de Venezuela 2004 - 2010</span>
-              </div>
-              <div class="info">
-                <img src="modulos/dmolina101/images/ve.png" class="pais">
-                Caracas - Venezuela
-              </div>
-              <div class="info">
-                <i class="fas fa-link"></i>
-                https://dmolina101.githu.io
-              </div>
+              <div class="titulo">{{ perfil.titulo }}</div>
+              <div class="subtitulo">{{ perfil.subtitulo }}</div>
+              <div class="info" v-for="info in perfil.info" v-html="info.html"></div>
             </div>
           </div>
-          <div class="col-8">
+
+          <div class="col-12 col-sm-8">
             <div class="wrapper_section">
 
-              <div id="sobre_mi" class="row">
+              <div id="sobre-mi" class="row">
                 <div class="col-12">
-
-                  <h2 class="titulo sobreMi"></h2>
-                  <div class="info infoSobreMi"></div>
-
+                  <h2 class="titulo">{{ secciones.sobreMi.titulo}}</h2>
+                  <div class="info" v-html="secciones.sobreMi.contenido"></div>
                 </div>
               </div>
 
               <div id="skills" class="row">
                 <div class="col-12">
 
-                  <h2 class="titulo habilidades"></h2>
+                  <h2 class="titulo">{{ secciones.habilidades.titulo}}</h2>
                   <div class="info">
                     <div class="row">
-                      <div class="col-6 rating html" rating-value="4">
-                        <img src="modulos/dmolina101/images/html.jpg" data-toggle="tooltip" data-placement="bottom" title="Html5">
+                      <div v-bind:class="'col-12 col-sm-6 rating ' + habilidad.clase" v-bind:rating-value="habilidad.rating" v-for="habilidad in habilidades">
+                        <img v-bind:src="'modulos/dmolina101/images/' + habilidad.icono" data-toggle="tooltip" data-placement="bottom" v-bind:title="habilidad.titulo">
                         <select>
                           <option value="1">Pésimo</option>
                           <option value="2">Regular</option>
@@ -588,349 +78,20 @@
                           <option value="4">Excelente</option>
                         </select>
                       </div>
-                      <div class="col-6 rating css" rating-value="4">
-                        <img src="modulos/dmolina101/images/css.jpg" data-toggle="tooltip" data-placement="bottom" title="CSS3">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating js" rating-value="4">
-                        <img src="modulos/dmolina101/images/js.jpg" data-toggle="tooltip" data-placement="bottom" title="JS">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating mysql" rating-value="3">
-                        <img src="modulos/dmolina101/images/mysql.jpg" data-toggle="tooltip" data-placement="bottom" title="MySql">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating node" rating-value="4">
-                        <img src="modulos/dmolina101/images/node.jpg" data-toggle="tooltip" data-placement="bottom" title="NodeJS">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating less" rating-value="4">
-                        <img src="modulos/dmolina101/images/less.jpg" data-toggle="tooltip" data-placement="bottom" title="Less">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating oracle" rating-value="3">
-                        <img src="modulos/dmolina101/images/oracle.jpg" data-toggle="tooltip" data-placement="bottom" title="Oracle">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating dynamodb" rating-value="3">
-                        <img src="modulos/dmolina101/images/dynamodb.jpg" data-toggle="tooltip" data-placement="bottom" title="DynamoDB">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating php" rating-value="4">
-                        <img src="modulos/dmolina101/images/php.jpg" data-toggle="tooltip" data-placement="bottom" title="PHP">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating bootstrap" rating-value="4">
-                        <img src="modulos/dmolina101/images/bootstrap.jpg" data-toggle="tooltip" data-placement="bottom" title="Bootstrap">
-                        <select>
-                          <option value="1" class="pesimo">Pésimo</option>
-                          <option value="2" class="regular">Regular</option>
-                          <option value="3" class="bueno">Bueno</option>
-                          <option value="4" class="excelente">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating soap" rating-value="3">
-                        <img src="modulos/dmolina101/images/soap.jpg" data-toggle="tooltip" data-placement="bottom" title="SOAP">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating restful" rating-value="4">
-                        <img src="modulos/dmolina101/images/restful.jpg" data-toggle="tooltip" data-placement="bottom" title="RESTful">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating codeigniter" rating-value="4">
-                        <img src="modulos/dmolina101/images/codeigniter.jpg" data-toggle="tooltip" data-placement="bottom" title="Codeigniter">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating laravel" rating-value="2">
-                        <img src="modulos/dmolina101/images/laravel.jpg" data-toggle="tooltip" data-placement="bottom" title="Laravel">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating android" rating-value="2">
-                        <img src="modulos/dmolina101/images/android.jpg" data-toggle="tooltip" data-placement="bottom" title="Android">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating jquery" rating-value="4">
-                        <img src="modulos/dmolina101/images/jquery.jpg" data-toggle="tooltip" data-placement="bottom" title="Jquery">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating git" rating-value="3">
-                        <img src="modulos/dmolina101/images/git.jpg" data-toggle="tooltip" data-placement="bottom" title="Git">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating composer" rating-value="2">
-                        <img src="modulos/dmolina101/images/composer.jpg" data-toggle="tooltip" data-placement="bottom" title="Composer">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating lodash" rating-value="3">
-                        <img src="modulos/dmolina101/images/lodash.png" data-toggle="tooltip" data-placement="bottom" title="Lodash">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating vue" rating-value="2">
-                        <img src="modulos/dmolina101/images/vue.png" data-toggle="tooltip" data-placement="bottom" title="Vue js">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating npm" rating-value="3">
-                        <img src="modulos/dmolina101/images/npm.jpg" data-toggle="tooltip" data-placement="bottom" title="Node Package Manager">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating aws" rating-value="3">
-                        <img src="modulos/dmolina101/images/aws.jpg" data-toggle="tooltip" data-placement="bottom" title="Amazon Web Services">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating serverless" rating-value="3">
-                        <img src="modulos/dmolina101/images/serverless.jpg" data-toggle="tooltip" data-placement="bottom" title="Serverless">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6 rating heroku" rating-value="2">
-                        <img src="modulos/dmolina101/images/heroku.jpg" data-toggle="tooltip" data-placement="bottom" title="Heroku">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 rating react" rating-value="3">
-                        <img src="modulos/dmolina101/images/react.jpg" data-toggle="tooltip" data-placement="bottom" title="React JS">
-                        <select>
-                          <option value="1">Pésimo</option>
-                          <option value="2">Regular</option>
-                          <option value="3">Bueno</option>
-                          <option value="4">Excelente</option>
-                        </select>
-                      </div>
-                      <div class="col-6"></div>
                     </div>
                   </div>
                 </div>
               </div>
 
-            </div>
-          </div>
-        </div>
-
-      </div><!-- Fin .img1 -->
-
-      <div class="img2">
-
-        <div class="row">
-          <div class="col-12">
-            <div class="wrapper_section">
-
               <div id="experiencia" class="row">
                 <div class="col-12">
-                  <h2 class="titulo experiencia">Experiencia Laboral</h2>
+                  <h2 class="titulo experiencia">{{ secciones.experienciaLab.titulo }}</h2>
                   <div class="info">
-                    <div class="row">
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Stacksavings</h4>
-                            <h5 class="card-subtitle mb-2 text-muted stacksavings">Programador JavaScript/NodeJS.</h5>
-                            <p class="card-text">12/2017 – Presente</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Técnologia Creativa A&R</h4>
-                            <h5 class="card-subtitle mb-2 text-muted tecCreativa">Programador Web y Lider de Proyecto.</h5>
-                            <p class="card-text">01/2017 – 03/2018</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                            <h5 class="card-subtitle mb-2 text-muted minppal1">Coordinador de Sistemas y Desarrollo de Software.</h5>
-                            <p class="card-text">07/2016 – 01/2017</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                            <h5 class="card-subtitle mb-2 text-muted minppal2">Coordinador de Calidad de Software.</h5>
-                            <p class="card-text">04/2016 – 01/2017</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">BQ Trading</h4>
-                            <h5 class="card-subtitle mb-2 text-muted bq-trading">Programador Web.</h5>
-                            <p class="card-text">09/2015 – 02/2016</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Corpovex</h4>
-                            <h5 class="card-subtitle mb-2 text-muted corpovex">Programador Web. (Comisión de Servicio)</h5>
-                            <p class="card-text">02/2015 – 09/2015</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Corporación de Abastecimientos y Servicios Agrícolas S.A.</h4>
-                            <h5 class="card-subtitle mb-2 text-muted casa">Programador Web.</h5>
-                            <p class="card-text">06/2008 – 09/2015</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Ministerio del Poder Popular para la Alimentación</h4>
-                            <h5 class="card-subtitle mb-2 text-muted minppal3">Programador Web. (Comisión de Servicio)</h5>
-                            <p class="card-text">10/2013 – 03/2014</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title">Banco del Tesoro</h4>
-                            <h5 class="card-subtitle mb-2 text-muted bancoTesoro">Programador Web. (Asesoramiento)</h5>
-                            <p class="card-text">05/2010 – 05/2010</p>
-                          </div>
-                        </div>
+                    <div class="card" v-for="data in experiencia">
+                      <div class="card-body">
+                        <h4 class="card-title">{{ data.empresa }}</h4>
+                        <h5 class="card-subtitle mb-2 text-muted">{{ data.cargo }}</h5>
+                        <p class="card-text">{{ data.tiempo }}, {{ data.lugar }} {{ data.presencial }}</p>
                       </div>
                     </div>
                   </div>
@@ -939,55 +100,16 @@
 
               <div id="certificados" class="row">
                 <div class="col-12">
-                  <h2 class="titulo certificados">Certificados</h2>
+                  <h2 class="titulo certificados">{{ secciones.certificados.titulo }}</h2>
                   <div class="info">
                     <div class="row">
-                      <div class="col-6">
+                      <div class="col-12 col-sm-12 col-md-12 col-lg-6" v-for="(certificado, index) in certificados">
                         <div class="card">
                           <div class="card-body">
-                            <h4 class="card-title cert5">Desarrollo de Servicios de Decisión mediante WSO2 Bussines Rules Server y JBoss Drools</h4>
-                            <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                            <p class="card-text">nov. de 2013 – nov. de 2013 / RIF: J-31746535-0</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title cert1">Desarrollo de Servicios de Datos mediante WSO2 Lean Enterprise Middleware</h4>
-                            <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                            <p class="card-text">oct. de 2013 – nov. de 2013 / RIF: J-31746535-0</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title cert2">Modelado y Automatización de Procesos mediante Bonita BPM Fundamentos</h4>
-                            <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                            <p class="card-text">oct. de 2013 – oct. de 2013 / RIF: J-31746535-0</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title cert3">Modelado de Procesos mediante la Notación Gráfica BPMN 2.0</h4>
-                            <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> Mijao</h5>
-                            <p class="card-text">sept. de 2013 – oct. de 2013  / RIF: J-31746535-0</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <h4 class="card-title cert4">Análisis y Diseño de Sistemas Orientado a Objetos con UML</h4>
-                            <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">Impartido por</span> ISCA</h5>
-                            <p class="card-text">nov. de 2010 – dic. de 2010 / RIF: J-30964433-5</p>
+                            <h4 class="card-title">{{ certificado.titulo }}</h4>
+                            <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">{{ certificado.impartido }}</span> {{ certificado.empresa }}</h5>
+                            <p class="card-text">{{ certificado.fecha }} / {{ certificado.id }}</p>
+                            <a id="certificado5" class="btn btn-primary modal_certificado" v-on:click="modalCertificado" v-bind:data-id-cert="index">{{ btnVerCert }}</a>
                           </div>
                         </div>
                       </div>
@@ -999,20 +121,122 @@
             </div>
           </div>
         </div>
+      </div>
 
-      </div><!-- Fin .img2 -->
+      <div class="wrapperContPdf">
 
-    </div>
+        <div class="img1">
+
+          <div class="row">
+            <div class="col-4">
+              <div class="wrapper_mePDF">
+                <img src="modulos/dmolina101/images/yo.jpg" class="img-thumbnail mx-auto d-block avatar">
+                <div class="titulo">>{{ perfil.titulo }}</div>
+                <div class="subtitulo">{{ perfil.subtitulo }}</div>
+                <div class="info" v-for="info in perfil.info" v-html="info.html"></div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="wrapper_section">
+
+                <div id="sobre_mi" class="row">
+                  <div class="col-12">
+                    <h2 class="titulo">{{ secciones.sobreMi.titulo}}</h2>
+                    <div class="info" v-html="secciones.sobreMi.pdf"></div>
+                  </div>
+                </div>
+
+                <div id="skills" class="row">
+                  <div class="col-12">
+
+                    <h2 class="titulo">{{ secciones.habilidades.titulo}}</h2>
+                    <div class="info">
+                      <div class="row">
+                        <div v-bind:class="'col-6 rating ' + habilidad.clase" v-bind:rating-value="habilidad.rating" v-for="habilidad in habilidades">
+                          <img v-bind:src="'modulos/dmolina101/images/' + habilidad.icono" data-toggle="tooltip" data-placement="bottom" v-bind:title="habilidad.titulo">
+                          <select>
+                            <option value="1">Pésimo</option>
+                            <option value="2">Regular</option>
+                            <option value="3">Bueno</option>
+                            <option value="4">Excelente</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- Fin .img1 -->
+
+        <div class="img2">
+
+          <div class="row">
+            <div class="col-12">
+              <div class="wrapper_section">
+
+                <div id="experiencia" class="row">
+                  <div class="col-12">
+                    <h2 class="titulo experiencia">{{ secciones.experienciaLab.titulo }}</h2>
+                    <div class="info">
+                      <div class="row">
+                        <div class="col-6" v-for="data in experiencia">
+                          <div class="card">
+                            <div class="card-body">
+                              <h4 class="card-title">{{ data.empresa }}</h4>
+                              <h5 class="card-subtitle mb-2 text-muted">{{ data.cargo }}</h5>
+                              <p class="card-text">{{ data.tiempo }}, {{ data.lugar }} {{ data.presencial }}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="certificados" class="row">
+                  <div class="col-12">
+                    <h2 class="titulo certificados">{{ secciones.certificados.titulo }}</h2>
+                    <div class="info">
+                      <div class="row">
+                        <div class="col-6" v-for="(certificado, index) in certificados">
+                          <div class="card">
+                            <div class="card-body">
+                              <h4 class="card-title cert5">{{ certificado.titulo }}</h4>
+                              <h5 class="card-subtitle mb-2 text-muted"><span class="impartido">{{ certificado.impartido }}</span> {{ certificado.empresa }}</h5>
+                              <p class="card-text">{{ certificado.fecha }} / {{ certificado.id }}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- Fin .img2 -->
+
+      </div>
+
+    </div><!-- Fin #app -->
 
     <script src="modulos/jquery/js/jquery-3.3.1.min.js"></script>
     <script src="modulos/popper/js/popper.min.js"></script>
-    <script src="modulos/bootstrap-4.1.3/js/bootstrap.min.js"></script>
-    <script src="modulos/font-awesome-5.4.1/js/all.js"></script>
+    <script src="modulos/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script src="modulos/fontawesome-5.9.0/js/all.min.js"></script>
     <script src="modulos/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
     <script src="modulos/dmolina101/js/idioma/idioma.js"></script>
     <script src="modulos/jsPDF-1.3.5/dist/jspdf.debug.js"></script>
     <script src="modulos/jsPDF-1.3.5/dist/jspdf.min.js"></script>
     <script src="modulos/html2canvas/js/html2canvas.min.js"></script>
+    <script src="modulos/vue/vue.min.js"></script>
+    <script src="modulos/zenscroll/js/zenscroll-min.js"></script>
     <script src="modulos/dmolina101/js/index.js"></script>
 
   </body>

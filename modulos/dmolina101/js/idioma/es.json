@@ -1,30 +1,76 @@
 {
-  "bancoTesoro"    : "Programador Web. (Asesoramiento)",
-  "bqTrading"      : "Programador Web.",
-  "btnCert"        : "Ver certificado",
+  "actualidad"     : "Actualidad",
+  "btnVerCert"     : "Ver certificado",
   "bueno"          : "Bueno",
-  "casa"           : "Programador Web.",
-  "cert1"          : "Desarrollo de Servicios de Datos mediante WSO2 Lean Enterprise Middleware",
-  "cert2"          : "Modelado y Automatización de Procesos mediante Bonita BPM Fundamentos",
-  "cert3"          : "Modelado de Procesos mediante la Notación Gráfica BPMN 2.0",
-  "cert4"          : "Análisis y Diseño de Sistemas Orientado a Objetos con UML",
-  "cert5"          : "Desarrollo de Servicios de Decisión mediante WSO2 Bussines Rules Server y JBoss Drools",
-  "certificados"   : "Certificados",
-  "corpovex"       : "Programador Web. (Comisión de Servicio)",
+  "cargos"         : {
+                       "1" : "CEO",
+                       "2" : "Programador JavaScript/NodeJS",
+                       "3" : "Programador Web y Lider de Proyecto",
+                       "4" : "Coordinador de Sistemas y Desarrollo de Software",
+                       "5" : "Coordinador de Calidad de Software",
+                       "6" : "Programador Web",
+                       "7" : "Programador Web (Comisión de Servicio)",
+                       "8" : "Programador Web (Asesoramiento)"
+                     },
+  "certificados"   : [
+                      {"titulo" : "Desarrollo de Servicios de Datos mediante WSO2 Lean Enterprise Middleware"},
+                      {"titulo" : "Modelado y Automatización de Procesos mediante Bonita BPM Fundamentos"},
+                      {"titulo" : "Modelado de Procesos mediante la Notación Gráfica BPMN 2.0"},
+                      {"titulo" : "Análisis y Diseño de Sistemas Orientado a Objetos con UML"},
+                      {"titulo" : "Desarrollo de Servicios de Decisión mediante WSO2 Bussines Rules Server y JBoss Drools"}
+                     ],
   "excelente"      : "Excelente",
-  "expLaboral"     : "Experiencia Laboral",
-  "habilidades"    : "Habilidades",
-  "infoSobreMi"    : "<p>Hola!, soy David Molina, programador especialista en Maquetación Web y JavaScript.</p><p>En 2008 obtuve mi diploma de Técnico Superior en Informática y en 2010 obtuve mi diploma de Licenciado en Infomática para la Gestión Social en la Universidad Bolivariana de Venezuela. Estoy <del>echando código</del> programando aproximadamente desde los 16 años de edad aunque profesionalmente comencé a ejercer a los 21 años.</p><p>Me considero un programador extremadamente apasionado que le encanta ayudar a construir sueños. Durante todos mis años como programador he aprendido a desempeñarme en varias áreas de desarrollo web desde la programación back-end (PHP, SQL, NoSQL, nodeJs) hasta la programación front-end (HTML, CSS, y Javascript), experiencia del usuario y diseño visual.</p><p>Además del desarrollo web, disfruto pasar el tiempo con mi esposa, familia y amigos viendo películas, jugando videojuegos y practicando futbol de salón.</p>",
-  "infoSobreMiPDF" : "<p>Hola!, soy David Molina, programador especialista en Maquetación Web y JavaScript.</p><p>En 2008 obtuve mi diploma de Técnico Superior en Informática y en 2010 obtuve mi diploma de Licenciado en Infomática para la Gestión Social en la Universidad Bolivariana de Venezuela. Estoy programando aproximadamente desde los 16 años de edad aunque profesionalmente comencé a ejercer a los 21 años.</p><p>Me considero un programador extremadamente apasionado que le encanta ayudar a construir sueños. Durante todos mis años como programador he aprendido a desempeñarme en varias áreas de desarrollo web desde la programación back-end (PHP, SQL, NoSQL, nodeJs) hasta la programación front-end (HTML, CSS, y Javascript), experiencia del usuario y diseño visual.</p><p>Además del desarrollo web, disfruto pasar el tiempo con mi esposa, familia y amigos viendo películas, jugando videojuegos y practicando futbol de salón.</p>",
-  "impartido"      : "Impartido por",
-  "imprimirCv"     : "Imprimir CV",
-  "minppal1"       : "Coordinador de Sistemas y Desarrollo de Software.",
-  "minppal2"       : "Coordinador de Calidad de Software.",
-  "minppal3"       : "Programador Web. (Comisión de Servicio)",
+  "idiomActivo"    : "es",
+  "menuContacto"   : [
+                      {"icono" : "fab fa-linkedin-in", "href" : "https://www.linkedin.com/in/david-leonardo-molina-ruíz-1254a9152", "titulo" : "Linkedin"},
+                      {"icono" : "fab fa-github", "href" : "https://github.com/dmolina101", "titulo" : "Github"},
+                      {"icono" : "fab fa-stack-overflow", "href" : "https://es.stackoverflow.com/users/95526/david-leonardo-molina-ruiz-dav?tab=profile", "titulo" : "Stackoverflow"}
+                     ],
+  "menuPrincipal"  : [
+                      {"text" : "Sobre Mí"},
+                      {"text" : "Habilidades"},
+                      {"text" : "Experiencia Laboral"},
+                      {"text" : "Certificados"},
+                      {"text" : "Imprimir CV"}
+                     ],
+  "pais"           : {
+                      "US" : "Estados Unidos",
+                      "VE" : "Venezuela"
+                     },
+  "perfil"         : {
+                      "titulo"    : "David L. Molina Ruíz",
+                      "subtitulo" : "Curriculum Vitae",
+                      "info"      : [
+                                     {"html" : "<i class='fas fa-code'></i> <span>Programador</span>"},
+                                     {"html" : "<i class='fas fa-birthday-cake'></i> <span>05/08/1986</span> </br> <img src='modulos/dmolina101/images/ve.png' class='pais'> <span>Caracas - Venezuela</span>"},
+                                     {"html" : "<i class='far fa-envelope'></i> <span>dmolina101@gmail.com</span>"},
+                                     {"html" : "<i class='fas fa-graduation-cap'></i> <span class='universidad'>Universidad Bolivariana </br> de Venezuela 2004 - 2010</span>"},
+                                     {"html" : "<i class='fas fa-map-marker-alt'></i> <img src='modulos/dmolina101/images/ve.png' class='pais'> <span>Caracas - Venezuela</span>"}
+                                    ]
+
+                    },
+  "presencial"     : {
+                      "presencial" : "",
+                      "remoto"     : "(Remoto)"
+                     },
   "pesimo"         : "Pésimo",
-  "programador"    : "Programador",
   "regular"        : "Regular",
-  "sobreMi"        : "Sobre Mí",
-  "tecCreativa"    : "Programador Web y Lider de Proyecto.",
-  "universidad"    : "Universidad Bolivariana </br> de Venezuela 2004 - 2010"
+  "secciones"      : {
+                       "sobreMi" : {
+                         "titulo" : "Sobre Mí",
+                         "contenido": "<p>Hola!, soy David Molina, programador especialista en Maquetación Web y JavaScript.</p><p>En 2008 obtuve mi diploma de Técnico Superior en Informática y en 2010 obtuve mi diploma de Licenciado en Infomática para la Gestión Social en la Universidad Bolivariana de Venezuela. Estoy <del>echando código</del> programando aproximadamente desde los 16 años de edad aunque profesionalmente comencé a ejercer a los 21 años.</p><p>Me considero un programador extremadamente apasionado que le encanta ayudar a construir sueños. Durante todos mis años como programador he aprendido a desempeñarme en varias áreas de desarrollo web desde la programación back-end (PHP, SQL, NoSQL, nodeJs) hasta la programación front-end (HTML, CSS, y Javascript), experiencia del usuario y diseño visual.</p><p>Además del desarrollo web, disfruto pasar el tiempo con mi esposa, familia y amigos viendo películas, jugando videojuegos y practicando futbol de salón.</p>",
+                         "pdf" : "<p>Hola!, soy David Molina, programador especialista en Maquetación Web y JavaScript.</p><p>En 2008 obtuve mi diploma de Técnico Superior en Informática y en 2010 obtuve mi diploma de Licenciado en Infomática para la Gestión Social en la Universidad Bolivariana de Venezuela. Estoy programando aproximadamente desde los 16 años de edad aunque profesionalmente comencé a ejercer a los 21 años.</p><p>Me considero un programador extremadamente apasionado que le encanta ayudar a construir sueños. Durante todos mis años como programador he aprendido a desempeñarme en varias áreas de desarrollo web desde la programación back-end (PHP, SQL, NoSQL, nodeJs) hasta la programación front-end (HTML, CSS, y Javascript), experiencia del usuario y diseño visual.</p><p>Además del desarrollo web, disfruto pasar el tiempo con mi esposa, familia y amigos viendo películas, jugando videojuegos y practicando futbol de salón.</p>",
+                         "impartido"      : "Impartido por"
+                       },
+                       "habilidades" : {
+                         "titulo" : "Habilidades"
+                       },
+                       "experienciaLab" : {
+                         "titulo" : "Experiencia Laboral"
+                       },
+                       "certificados" : {
+                         "titulo" : "Certificados"
+                       }
+                     },
+  "sofguar"        : "Sofguar"
 }

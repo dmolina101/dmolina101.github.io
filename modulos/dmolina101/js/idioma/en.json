@@ -1,30 +1,76 @@
 {
-  "bancoTesoro"    : "Web programmer. (Counseling)",
-  "bqTrading"      : "Web programmer.",
-  "btnCert"        : "See certificate",
+  "actualidad"     : "Present",
+  "btnVerCert"     : "See certificate",
   "bueno"          : "Good",
-  "casa"           : "Web programmer.",
-  "cert1"          : "Development of Data Services through WSO2 Lean Enterprise Middleware",
-  "cert2"          : "Modeling and Process Automation through Bonita BPM foundation",
-  "cert3"          : "Process Modeling by Graphical Notation BPMN 2.0",
-  "cert4"          : "Analysis and Design of Object Oriented Systems with UML",
-  "cert5"          : "Development of Decision Services through WSO2 Bussines Rules Server and JBoss Drools",
-  "certificados"   : "Certificates",
-  "corpovex"       : "Web programmer. (Sevice commission)",
+  "cargos"         : {
+                       "1" : "CEO",
+                       "2" : "JavaScript/NodeJS Developer",
+                       "3" : "Web Developer and Project Leader",
+                       "4" : "Coordinator of Systems and Software Development",
+                       "5" : "Coordinator of Software Quality",
+                       "6" : "Web Developer",
+                       "7" : "Web Developer (Sevice Commission)",
+                       "8" : "Web Developer (Counseling)"
+                     },
+  "certificados"   : [
+                      {"titulo" : "Development of Data Services through WSO2 Lean Enterprise Middleware"},
+                      {"titulo" : "Modeling and Process Automation through Bonita BPM foundation"},
+                      {"titulo" : "Process Modeling by Graphical Notation BPMN 2.0"},
+                      {"titulo" : "Analysis and Design of Object Oriented Systems with UML"},
+                      {"titulo" : "Development of Decision Services through WSO2 Bussines Rules Server and JBoss Drools"}
+                     ],
   "excelente"      : "Excellent",
-  "expLaboral"     : "Work Experience",
-  "habilidades"    : "Skills",
-  "infoSobreMi"    : "<p>Hi, I'm David Molina, a programmer specializing in Web Layout and JavaScript.</p><p>In 2008 I obtained my diploma as a Higher Technician in Computer Science and in 2010 I obtained my Bachelor's Degree in Information Management for Social Management at the Bolivarian University of Venezuela. I am programming from approximately 16 years of age, although I started professionally at the age of 21.</p><p>I consider myself an extremely passionate programmer who loves to help build dreams. During all my years as a programmer I have learned to play in several areas of web development from the programming back-end (PHP, SQL, NoSQL, nodeJs) until programming front-end (HTML, CSS, and Javascript), user experience and visual design.</p><p>In addition to web development, I enjoy spending time with my wife, family and friends watching movies, playing video games and practicing indoor soccer.</p>",
-  "infoSobreMiPDF" : "<p>Hi, I'm David Molina, a programmer specializing in Web Layout and JavaScript.</p><p>In 2008 I obtained my diploma as a Higher Technician in Computer Science and in 2010 I obtained my Bachelor's Degree in Information Management for Social Management at the Bolivarian University of Venezuela. I am programming from approximately 16 years of age, although I started professionally at the age of 21.</p><p>I consider myself an extremely passionate programmer who loves to help build dreams. During all my years as a programmer I have learned to play in several areas of web development from the programming back-end (PHP, SQL, NoSQL, nodeJs) until programming front-end (HTML, CSS, and Javascript), user experience and visual design.</p><p>In addition to web development, I enjoy spending time with my wife, family and friends watching movies, playing video games and practicing indoor soccer.</p>",
+  "idiomActivo"    : "en",
   "impartido"      : "Imparted by",
-  "imprimirCv"     : "Print CV",
-  "minppal1"       : "Coordinator of Systems and Software Development.",
-  "minppal2"       : "Coordinator of Software quality.",
-  "minppal3"       : "Web programmer. (Sevice commission)",
+  "menuContacto"   : [
+                      {"icono" : "fab fa-linkedin-in", "href" : "https://www.linkedin.com/in/david-leonardo-molina-ruíz-1254a9152", "titulo" : "Linkedin"},
+                      {"icono" : "fab fa-github", "href" : "https://github.com/dmolina101", "titulo" : "Github"},
+                      {"icono" : "fab fa-stack-overflow", "href" : "https://es.stackoverflow.com/users/95526/david-leonardo-molina-ruiz-dav?tab=profile", "titulo" : "Stackoverflow"}
+                     ],
+  "menuPrincipal"  : [
+                      {"text" : "About Me"},
+                      {"text" : "Skills"},
+                      {"text" : "Work Experience"},
+                      {"text" : "Certificates"},
+                      {"text" : "Print Resume"}
+                     ],
+  "pais"           : {
+                      "US" : "United States",
+                      "VE" : "Venezuela"
+                     },
+  "perfil"         : {
+                      "titulo"    : "David L. Molina Ruíz",
+                      "subtitulo" : "Curriculum Vitae",
+                      "info"      : [
+                                     {"html" : "<i class='fas fa-code'></i> <span>Developer</span>"},
+                                     {"html" : "<i class='fas fa-birthday-cake'></i> <span>05/08/1986</span> </br> <img src='modulos/dmolina101/images/ve.png' class='pais'> <span>Caracas - Venezuela</span>"},
+                                     {"html" : "<i class='far fa-envelope'></i> <span>dmolina101@gmail.com</span>"},
+                                     {"html" : "<i class='fas fa-graduation-cap'></i> <span class='universidad'>Bolivarian University </br> of Venezuela 2004 - 2010</span>"},
+                                     {"html" : "<i class='fas fa-map-marker-alt'></i> <img src='modulos/dmolina101/images/ve.png' class='pais'> <span>Caracas - Venezuela</span>"}
+                                    ]
+
+                    },
+  "presencial"     : {
+                      "presencial" : "",
+                      "remoto"     : "(Remote)"
+                     },
   "pesimo"         : "Poor",
-  "programador"    : "Developer",
   "regular"        : "Regular",
-  "sobreMi"        : "About Me",
-  "tecCreativa"    : "Web Programmer and Project Leader.",
-  "universidad"    : "Bolivarian University </br> of Venezuela 2004 - 2010"
+  "secciones"      : {
+                       "sobreMi" : {
+                         "titulo" : "About Me",
+                         "contenido" : "<p>Hi, I'm David Molina, a programmer specializing in Web Layout and JavaScript.</p><p>In 2008 I obtained my diploma as a Higher Technician in Computer Science and in 2010 I obtained my Bachelor's Degree in Information Management for Social Management at the Bolivarian University of Venezuela. I am programming from approximately 16 years of age, although I started professionally at the age of 21.</p><p>I consider myself an extremely passionate programmer who loves to help build dreams. During all my years as a programmer I have learned to play in several areas of web development from the programming back-end (PHP, SQL, NoSQL, nodeJs) until programming front-end (HTML, CSS, and Javascript), user experience and visual design.</p><p>In addition to web development, I enjoy spending time with my wife, family and friends watching movies, playing video games and practicing indoor soccer.</p>",
+                         "pdf" : "<p>Hi, I'm David Molina, a programmer specializing in Web Layout and JavaScript.</p><p>In 2008 I obtained my diploma as a Higher Technician in Computer Science and in 2010 I obtained my Bachelor's Degree in Information Management for Social Management at the Bolivarian University of Venezuela. I am programming from approximately 16 years of age, although I started professionally at the age of 21.</p><p>I consider myself an extremely passionate programmer who loves to help build dreams. During all my years as a programmer I have learned to play in several areas of web development from the programming back-end (PHP, SQL, NoSQL, nodeJs) until programming front-end (HTML, CSS, and Javascript), user experience and visual design.</p><p>In addition to web development, I enjoy spending time with my wife, family and friends watching movies, playing video games and practicing indoor soccer.</p>"
+                       },
+                       "habilidades" : {
+                         "titulo" : "Skills"
+                       },
+                       "experienciaLab" : {
+                         "titulo" : "Work Experience"
+                       },
+                       "certificados" : {
+                         "titulo" : "Certificates"
+                       }
+                     },
+  "sofguar"        : "Sofguar"
 }
