@@ -117,6 +117,8 @@ var app = new Vue({
         {clase : "css", rating : "4", titulo : "CSS3", icono : "css.jpg"},
         {clase : "js", rating : "4", titulo : "JS", icono : "js.jpg"},
         {clase : "mysql", rating : "4", titulo : "MySql", icono : "mysql.jpg"},
+        {clase : "wordpress", rating : "4", titulo : "Wordpress", icono : "wordpress.jpg"},
+        {clase : "prestashop", rating : "4", titulo : "Prestashop", icono : "prestashop.jpg"},
         {clase : "node", rating : "4", titulo : "NodeJS", icono : "node.jpg"},
         {clase : "less", rating : "4", titulo : "Less", icono : "less.jpg"},
         {clase : "oracle", rating : "4", titulo : "Oracle", icono : "oracle.jpg"},
