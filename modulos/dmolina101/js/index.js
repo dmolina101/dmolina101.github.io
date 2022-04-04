@@ -130,7 +130,7 @@ var app = new Vue({
         {clase : "soap", rating : "4", titulo : "SOAP", icono : "soap.jpg"},
         {clase : "restful", rating : "4", titulo : "RESTful", icono : "restful.jpg"},
         {clase : "codeigniter", rating : "4", titulo : "Codeigniter", icono : "codeigniter.jpg"},
-        {clase : "laravel", rating : "3", titulo : "Laravel", icono : "laravel.jpg"},
+        {clase : "laravel", rating : "4", titulo : "Laravel", icono : "laravel.jpg"},
         {clase : "android", rating : "2", titulo : "Android", icono : "android.jpg"},
         {clase : "jquery", rating : "4", titulo : "Jquery", icono : "jquery.jpg"},
         {clase : "git", rating : "4", titulo : "Git", icono : "git.jpg"},
