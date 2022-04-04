@@ -152,15 +152,16 @@ var app = new Vue({
       const traduccion = await this.traductor();
 
       const experiencia = [
-        {empresa : "Sofguar", cargo : traduccion.cargos["1"], tiempo : "02/2019 - " + traduccion.actualidad, lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
-        {empresa : "Stacksavings", cargo : traduccion.cargos["2"], tiempo : "12/2017 – 01/2019", lugar : traduccion.pais.US, presencial : traduccion.presencial.remoto},
-        {empresa : "Técnologia Creativa A&R", cargo : traduccion.cargos["3"], tiempo : "01/2017 – 03/2018", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
-        {empresa : "Ministerio del Poder Popular para la Alimentación", cargo : traduccion.cargos["4"], tiempo : "07/2016 – 01/2017", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
-        {empresa : "Ministerio del Poder Popular para la Alimentación", cargo : traduccion.cargos["5"], tiempo : "04/2016 – 01/2017", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
-        {empresa : "BQ Trading", cargo : traduccion.cargos["6"], tiempo : "09/2015 – 02/2016", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
-        {empresa : "Corpovex", cargo : traduccion.cargos["7"], tiempo : "02/2015 – 09/2015", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
-        {empresa : "Corporación de Abastecimientos y Servicios Agrícolas S.A.", cargo : traduccion.cargos["6"], tiempo : "06/2008 – 09/2015", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
-        {empresa : "Ministerio del Poder Popular para la Alimentación", cargo : traduccion.cargos["7"], tiempo : "10/2013 – 03/2014", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial}/*,
+        {empresa : "Geek Soluciones Tecnológicas", cargo : traduccion.cargos["1"], tiempo : "02/2020 - " + traduccion.actualidad, lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "Sofguar", cargo : traduccion.cargos["2"], tiempo : "02/2019 - 02/2020", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "Stacksavings", cargo : traduccion.cargos["3"], tiempo : "12/2017 – 01/2019", lugar : traduccion.pais.US, presencial : traduccion.presencial.remoto},
+        {empresa : "Técnologia Creativa A&R", cargo : traduccion.cargos["4"], tiempo : "01/2017 – 03/2018", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "Ministerio del Poder Popular para la Alimentación", cargo : traduccion.cargos["5"], tiempo : "07/2016 – 01/2017", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "Ministerio del Poder Popular para la Alimentación", cargo : traduccion.cargos["6"], tiempo : "04/2016 – 01/2017", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "BQ Trading", cargo : traduccion.cargos["7"], tiempo : "09/2015 – 02/2016", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "Corpovex", cargo : traduccion.cargos["8"], tiempo : "02/2015 – 09/2015", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "Corporación de Abastecimientos y Servicios Agrícolas S.A.", cargo : traduccion.cargos["9"], tiempo : "06/2008 – 09/2015", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial},
+        {empresa : "Ministerio del Poder Popular para la Alimentación", cargo : traduccion.cargos["10"], tiempo : "10/2013 – 03/2014", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial}/*,
         {empresa : "Banco del Tesoro", cargo : traduccion.cargos["8"]", tiempo : "05/2010 – 05/2010", lugar : traduccion.pais.VE, presencial : traduccion.presencial.presencial}*/
       ];
 
