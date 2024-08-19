@@ -1,0 +1,141 @@
+@import "../variables.less";
+
+.paid-pool {
+    padding-left: 15px;
+
+    .bi {
+        margin-left: 5px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+}
+
+.card {
+    border-color: #fff;
+    border-radius: 18px;
+    padding: 15px;
+
+    .card-body {
+
+        .card-title {
+            margin-bottom: 25px;
+        }
+
+        .card-save-button {
+            text-align: end;
+
+            button {
+                text-transform: uppercase;
+            }
+
+        }
+
+        .container-fluid {
+            background: linear-gradient(180deg,#fff 67.86%,#eef2fb);
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 18px;
+            margin-bottom: 15px;
+            min-height: inherit;
+            padding: inherit;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            .group-title {
+                font-size: 1rem;
+                padding-left: 8px;
+                text-transform: uppercase;
+            }
+
+            table {
+
+                caption {
+
+                    > div {
+                        font-size: .8rem;
+
+                        &:last-child {
+                            padding-top: 8px;
+                        }
+
+                        > span {
+                            font-weight: bold;
+
+                            &.countdown {
+
+                                > span {
+                                    font-weight: normal;
+                                    margin-left: 5px;
+                                }
+
+                            }
+
+                        }
+
+                        .badge {
+                            font-size: .8rem;
+                        }
+
+                    }
+
+                }
+
+                thead {
+
+                    tr {
+
+                        th {
+                            font-size: .8rem;
+                        }
+
+                    }
+
+                }
+
+                tbody {
+
+                    tr {
+
+                        td {
+
+                            input {
+                                text-align: center;
+                            }
+
+                        }
+
+                        .td-flag {
+                            vertical-align: middle;
+
+                            img {
+                                max-width: 35px;
+                            }
+
+                        }
+
+                        .td-team-name {
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            vertical-align: middle;
+
+                            @media (max-width: 800px) {
+                                font-size: .8rem;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

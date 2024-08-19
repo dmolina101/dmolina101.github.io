@@ -1,0 +1,39 @@
+@import "../variables.less";
+
+.toast-container {
+
+    &.w-100 {
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 0px;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+    }
+
+}
+
+.toast {
+    background-color: #ffffff;
+
+    .toast-body {
+
+        .border-top {
+            text-align: end;
+
+            button[data-bs-dismiss="toast"] {
+                margin-left: 10px !important;
+            }
+
+            .btn-secondary {
+
+                &:hover {
+                    border-color: @border-color-secondary-hover !important;
+                }
+
+            }
+
+        }
+
+    }
+
+}

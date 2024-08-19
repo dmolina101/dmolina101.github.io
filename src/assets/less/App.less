@@ -1,0 +1,128 @@
+@import "./Variables.less";
+
+[v-cloak] {
+  display: none;
+}
+
+#app {
+    background-color: @color-grey-1;
+
+    .btn {
+        border: @btn-border;
+        font-size: @btn-font-size;
+        font-weight: @btn-font-weight;
+        padding: @btn-padding;
+
+        &.btn-filled {
+            background-color: @btn-filled-background-color;
+            border-color: @btn-filled-border-color;
+            color: @btn-filled-font-color;
+
+            &:hover {
+                background-color: @btn-filled-hover-background-color;
+                border-color: @btn-filled-hover-border-color;
+                color: @btn-filled-hover-font-color;
+            }
+
+        }
+
+        &.btn-filled-bordered {
+            background-color: @btn-filled-background-color;
+            border-color: @btn-filled-bordered-border-color;
+            color: @btn-filled-font-color;
+
+            &:hover {
+                background-color: @btn-filled-hover-background-color;
+                border-color: @btn-filled-bordered-hover-border-color;
+                color: @btn-filled-hover-font-color;
+            }
+
+        }
+
+        &.btn-outline {
+            background-color: @btn-outline-background-color;
+            border-color: @btn-outline-border-color;
+            color: @btn-outline-font-color;
+
+            &:hover {
+                background-color: @btn-outline-hover-background-color;
+                border-color: @btn-outline-hover-border-color;
+                color: @btn-outline-hover-font-color;
+            }
+
+        }
+
+        &.btn-outline-bordered {
+            background-color: @btn-outline-background-color;
+            border-color: @btn-outline-bordered-border-color;
+            color: @btn-outline-font-color;
+
+            &:hover {
+                background-color: @btn-outline-hover-background-color;
+                border-color: @btn-outline-bordered-hover-border-color;
+                color: @btn-outline-hover-font-color;
+            }
+
+        }
+        
+        /* Eliminar ya que viene la version con btn-filled */
+        &.btn-primary {
+            background-color: @background-color-primary;
+            border-color: @border-color-primary;
+            color: @color-primary;
+
+            &:hover {
+                background-color: @background-color-primary-hover;
+                border-color: @color-primary;
+                color: @color-primary-hover;
+            }
+
+        }
+
+        &.btn-secondary {
+            background-color: @background-color-secondary;
+            color: @color-secondary;
+
+            &:hover {
+                border-color: @border-color-secondary;
+                color: @color-secondary-hover;
+            }
+
+        }
+
+    }
+
+    form {
+
+        .field-error {
+
+            .form-control,
+            .form-select,
+            .input-group-text {
+                border-color: #cc0000;
+            }
+
+            .error-msg {
+                color: #cc0000;
+                font-size: .8rem;
+                width: 100%;
+
+                p {
+                    margin-bottom: 0px;
+                }
+
+            }
+
+        }
+
+        .form-control {
+
+            &:focus {
+                box-shadow: none;
+            }
+            
+        }
+
+    }
+
+}// Fin #app

@@ -1,0 +1,177 @@
+@import "../Variables.less";
+
+.container {
+    padding-bottom: 10%;
+    padding-top: 7%;
+
+    .title {
+        font-weight: bold;
+        margin-bottom: 15px;
+        padding-left: 15px;
+    }
+
+    form {
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 18px;
+        padding: 15px;
+
+        .input-wrapper {
+
+            .input-group {
+
+                .input-group-text {
+                    background-color: @input-background-color;
+                    border: @input-border;
+                    border-left: 0px !important;
+                    border-radius: @input-border-radius;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
+        
+                }
+
+                .form-control {
+                    border-right: 0px;
+                }
+
+            }
+    
+            .form-label {
+                margin-bottom: 2px;
+                padding-left: 15px;
+                width: 100%;
+            }
+
+            .error-msg,
+            .form-text {
+                padding-left: 15px;
+            }
+    
+            .form-control,
+            .form-select {
+                background-color: @input-background-color;
+                border: @input-border;
+                border-radius: @input-border-radius;
+                padding-left: 15px;
+
+                &:disabled {
+                    background-color: #e9ecef;
+                }
+
+                &:focus {
+                    background-color: #fff;
+                }
+
+            }
+
+            .wrapper-products-list {
+                border: @input-border;
+                border-radius: @input-border-radius;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+
+            &.list-opened {
+                position:relative;
+
+                // Product field
+                &:nth-child(1) {
+
+                    .input-group-text {
+                        /*box-shadow: 8px -8px 8px -6px rgba(64, 60, 67, .24);*/
+                        border-bottom: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+
+                    .form-control {
+                        /*box-shadow: -8px -8px 8px -6px rgba(64, 60, 67, .24);*/
+                        border-bottom: 0px;
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+
+                }
+
+                .wrapper-products-list {
+                    background-color: #fff;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 10;
+
+                    ul {
+                        list-style: none;
+                        margin-bottom: 0px;
+                        padding-left: 10px;
+
+                        li {
+                            padding: 10px 5px;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+
+                        }
+
+                    }
+
+                }
+                
+            }
+
+            &.field-error {
+
+                .wrapper-products-list {
+                    border-color: #cc0000;
+                }
+
+            }
+
+        }
+
+        .row {
+
+            &.wrapper-map-help-block {
+
+                > .col {
+                    margin-top: 0;
+                    padding-left: 0;
+
+                    .form-text {
+                        margin-top: 0;
+                        padding-left: 15px;
+                    }
+
+                }
+
+            }
+            
+            .map-wrapper {
+                height: 250px;
+
+                #map {
+                    border: 1px solid rgba(0,0,0,0.1);
+                    border-radius: 18px;
+                    height: 100%;
+                    width: 100%;
+                }
+
+            }
+
+        }
+        
+        .alert {
+            border-radius: @alert-border-radius;
+        }
+
+        #btn-sell {
+            border-radius: @btn-border-radius;
+            font-weight: bold;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+    }
+
+}

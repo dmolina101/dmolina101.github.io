@@ -1,0 +1,42 @@
+@import "../variables.less";
+
+.vueperslides{
+    height: 55px;
+    margin-bottom: 2em;
+
+    > div {
+        border: 1px solid blue !important;
+    }
+
+    .vueperslide{
+        text-align: center;
+
+        .btn{
+            background: linear-gradient(180deg,#fff 67.86%,#eef2fb);
+            border: none;
+            border-radius: 9px;
+
+            > div{
+
+                &:nth-child(1){
+                    font-size: 1em;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                }
+
+                &:nth-child(2){
+                    font-size: 1.3em;
+                    font-weight: 600;
+                }
+
+            }
+
+        }
+
+    }
+
+    .vueperslides__arrows {
+        border: 1px solid red;
+    }
+
+}

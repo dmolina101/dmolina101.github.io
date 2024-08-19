@@ -1,0 +1,97 @@
+@import "../Variables.less";
+
+.container {
+    padding-bottom: 10%;
+    padding-top: 7%;
+
+    .title {
+        font-weight: bold;
+    }
+
+    form {
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 18px;
+        padding: 15px;
+
+        .input-group {
+
+            &:nth-child(2) {
+                margin-bottom: 25px !important;
+                margin-top: 25px;
+            }
+
+        }
+
+        .input-group-text {
+            background-color: @input-background-color;
+            border: @input-border;
+            border-radius: @input-border-radius;
+
+            &:nth-child(2) {
+                border-bottom-left-radius: @input-border-radius !important;
+                border-right: 0px;
+                border-top-left-radius: @input-border-radius !important;
+            }
+
+            &:nth-child(4) {
+                border-bottom-right-radius: @input-border-radius !important;
+                border-left: 0px;
+                border-top-right-radius: @input-border-radius !important;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+        .form-label {
+            width: 100%;
+        }
+
+        .form-control {
+            background-color: @input-background-color;
+            border: @input-border;
+            border-left: 0px;
+            border-radius: @input-border-radius;
+
+            &#email {
+                border-bottom-right-radius: @input-border-radius !important;
+                border-top-right-radius: @input-border-radius !important;
+            }
+
+            &#password {
+                border-radius: 0px !important;
+                border-right: 0px;
+            }
+
+        }
+
+        #btn-sign-in {
+            border-radius: @btn-border-radius;
+            font-weight: bold;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .btn-forgot-password,
+        .btn-sign-up {
+            color: #265b88;
+            font-size: 1.1rem;
+            font-weight: bold;
+
+            &.btn-forgot-password {
+                margin-top: 10px;
+            }
+
+        }
+
+        .wrapper-sign-up {
+            padding-top: 40px;
+        }
+
+    }
+
+}

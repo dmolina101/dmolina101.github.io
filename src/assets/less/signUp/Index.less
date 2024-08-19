@@ -1,0 +1,118 @@
+@import "../variables.less";
+
+.container {
+    padding-bottom: 10%;
+    padding-top: 7%;
+
+    .title {
+        font-weight: bold;
+    }
+
+    form {
+        background-color: #fff;
+        border-radius: 18px;
+        padding: 15px;
+
+        .input-group {
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                margin-bottom: 0px !important;
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                margin-bottom: 25px !important;
+                margin-top: 25px;
+            }
+
+        }
+
+        .input-group-text {
+            background-color: @input-background-color;
+            border: @input-border;
+            border-radius: @input-border-radius;
+
+            &:nth-child(2) {
+                border-bottom-left-radius: @input-border-radius !important;
+                border-right: 0px;
+                border-top-left-radius: @input-border-radius !important;
+            }
+
+            &:nth-child(4) {
+                border-bottom-right-radius: @input-border-radius !important;
+                border-left: 0px;
+                border-top-right-radius: @input-border-radius !important;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .bi-check-circle-fill {
+                    color: #1DA110;             
+                }
+
+                .bi-x-circle-fill {
+                    color: #cc0000;
+                }
+
+            }
+
+        }
+
+        .form-label {
+            width: 100%;
+        }
+
+        .form-control {
+            background-color: @input-background-color;
+            border: @input-border;
+            border-left: 0px;
+            border-radius: @input-border-radius;
+
+            &#email {
+                border-bottom-right-radius: @input-border-radius !important;
+                border-top-right-radius: @input-border-radius !important;
+            }
+
+            &#password,
+            &#confirm-password,
+            &#username  {
+                border-radius: 0px !important;
+                border-right: 0px;
+            }
+
+            &#username {
+                text-transform: lowercase;
+            }
+
+        }
+
+        #btn-sign-up {
+            border-radius: @btn-border-radius;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &:disabled {
+                cursor:not-allowed;
+                pointer-events: all;
+            }
+
+        }
+
+        .btn-sign-in {
+            color: #265b88;
+
+            &.btn-forgot-password {
+                margin-top: 10px;
+            }
+
+        }
+
+        .wrapper-sign-in {
+            padding-top: 40px;
+        }
+
+    }
+
+}

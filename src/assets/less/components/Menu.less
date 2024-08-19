@@ -1,0 +1,124 @@
+@import "../variables.less";
+
+#wrapper-menu{
+    background: #000;
+    padding: 1rem 0;
+
+    > .row{
+        margin-right: 0px;
+    }
+
+    .logo{
+        height: 50px;
+        margin-left: 15px;
+
+        @media (max-width: 992px) {
+            height: 40px;
+        }
+
+    }
+
+    nav {
+
+        .navbar-toggler {
+            border: 2px solid @color-yellow-1;
+            margin-left: 15px;
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(251, 181, 18, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+
+        }
+
+        .navbar-collapse {
+            
+            @media (max-width: 992px) {
+                background-color: #000;
+                left: 12px;
+                padding: 5px 10px;
+                position: absolute;
+                top: 60px;
+            }
+
+        }
+
+        .nav-item{
+            margin: 0px 5px;
+
+            a.nav-link {
+                color: #fff;
+                font-size: @font-size;
+                font-weight: 700;
+                padding: 2px 8px;
+                text-transform: uppercase;
+
+                &:hover{
+                    color: @color-primary-hover;
+                }
+
+                &.router-link-active{
+                    color: @color-primary-active;
+                }
+
+            }
+
+        }
+
+    }
+
+    .btn {
+        border-radius: @btn-border-radius;
+        text-transform: uppercase;
+
+        &.btn-sign-in {
+            margin-right: 15px;
+        }
+
+    }
+
+    .dropdown {
+
+        .user-account {
+            background-color: #fff;
+            border-radius: 30px;
+            padding: 0.375rem;
+
+            &::after {
+                display: none;
+            }
+
+            img{
+                border-radius: 30px;
+                height: 24px;
+                width: 24px;
+            }
+
+            .bi{
+                border-radius: 20px;
+                bottom: -4px;
+                position: absolute;
+                right: 3px;
+
+                &::before{
+                    background-color: #fff;
+                    border-radius: 10px;
+                    font-size: 10px;
+                    font-weight: bold !important;
+                    padding: 2px;
+                }
+
+            }
+
+        }
+
+        .dropdown-menu{
+
+            .user_name{
+                font-weight: bold;
+            }
+
+        }
+
+    }
+
+}
