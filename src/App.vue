@@ -6,7 +6,7 @@
 <script>
 
   import { defineComponent } from 'vue'
-  import Menu from './components/Menu.vue'
+  import Menu from './components/menu/Index.vue'
 
   export default defineComponent({
     components: {

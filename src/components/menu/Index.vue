@@ -31,7 +31,7 @@
 
 import { defineComponent, onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { useTranslatorStore } from '../stores/Translator.js'
+import { useTranslatorStore } from './Translator.js'
 
 export default defineComponent({
     setup() {
@@ -63,4 +63,4 @@ export default defineComponent({
 
 </script>
 
-<style lang="less" scoped src="../assets/less/components/Menu.less"></style>
+<style lang="less" scoped src="../../assets/less/components/menu/Index.less"></style>

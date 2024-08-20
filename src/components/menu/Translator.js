@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { esp } from '../langs/Esp'
-import { eng } from '../langs/Eng'
+import { esp } from './langs/Esp'
+import { eng } from './langs/Eng'
 
 export const useTranslatorStore = defineStore('translator', () => {
 
