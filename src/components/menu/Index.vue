@@ -6,8 +6,8 @@
 
         <div class="collapse navbar-collapse" id="itemsMenuPrincipal">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item" v-for="menu in menuPrincipal">
-                    <a class="nav-link link">{{ menu.text }}</a>
+                <li class="nav-item" v-for="item in menu">
+                    <a class="nav-link link">{{ item.text }}</a>
                 </li>
             </ul>
         </div>
@@ -18,28 +18,34 @@
                     <i :class="menu.icono"></i>
                 </a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link idioma" @click="lang">
                     <span class="text-uppercase" :data-lang="idiomActivo">{{ idiomActivo }}</span>
                 </a>
-            </li>
+            </li>-->
         </ul>
     </nav>
 </template>
 
 <script>
 
-import { defineComponent, onBeforeMount, ref } from 'vue'
+import { defineComponent, onBeforeMount, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useTranslatorStore } from './Translator.js'
 
 export default defineComponent({
     setup() {
 
-        const menuPrincipal = ref([])
-        const menuContacto = ref([])
         const translation = useTranslatorStore().translation(1)
-
+        const menu = ref([
+            { text: translation.menu.link1 },
+            { text: translation.menu.link2 },
+            { text: translation.menu.link3 },
+            { text: translation.menu.link4 },
+            { text: translation.menu.link5 }
+        ])
+        const menuContacto = ref([])
+        
         onBeforeMount(() => {
 
         })
@@ -55,7 +61,7 @@ export default defineComponent({
         return {
             lang,
             menuContacto,
-            menuPrincipal
+            menu
         }
 
     }
