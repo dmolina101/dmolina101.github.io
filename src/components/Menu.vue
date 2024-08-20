@@ -7,20 +7,20 @@
         <div class="collapse navbar-collapse" id="itemsMenuPrincipal">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" v-for="menu in menuPrincipal">
-                    <a class="nav-link link" v-on:click="irSeccion">{{ menu.text }}</a>
+                    <a class="nav-link link">{{ menu.text }}</a>
                 </li>
             </ul>
         </div>
 
         <ul id="menu_contacto">
             <li class="nav-item" v-for="menu in menuContacto">
-                <a class="nav-link" data-toggle="tooltip" data-placement="bottom" v-bind:title="menu.titulo" v-bind:href="menu.href" target="_blank">
-                    <i v-bind:class="menu.icono"></i>
+                <a class="nav-link" data-toggle="tooltip" data-placement="bottom" :title="menu.titulo" :href="menu.href" target="_blank">
+                    <i :class="menu.icono"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link idioma" v-on:click="idioma">
-                    <span class="text-uppercase" v-bind:data-lang="idiomActivo">{{ idiomActivo }}</span>
+                <a class="nav-link idioma" @click="lang">
+                    <span class="text-uppercase" :data-lang="idiomActivo">{{ idiomActivo }}</span>
                 </a>
             </li>
         </ul>
@@ -29,44 +29,33 @@
 
 <script>
 
-import { computed, defineComponent } from 'vue'
+import { defineComponent, onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { useUserAccountStore } from '../stores/UserAccount.js'
-import { ajax } from '../utils/AjaxRequest'
+import { useTranslatorStore } from '../stores/Translator.js'
 
 export default defineComponent({
     setup() {
 
-        const route = useRoute()
-        const userAccount = useUserAccountStore()
+        const menuPrincipal = ref([])
+        const menuContacto = ref([])
+        const translation = useTranslatorStore().translation(1)
 
-        const showLogin = computed(function() {
-            return (route.name !== 'sign-in' && userAccount.state.id === null)
+        onBeforeMount(() => {
+
         })
 
-        const showSignUp = computed(function() {
-            return (route.name !== 'sign-up' && userAccount.state.id === null)
-        })
+        const lang = () => {
 
-        const userLogged = computed(function() {
-            return userAccount.state.id !== null
-        })
+        }
 
-        const logout = function() {
-
-            localStorage.clear();
-            userAccount.updateState()
-            this.$router.push({ name: "home" });
+        const translate = () => {
 
         }
 
         return {
-            logout,
-            route,
-            showLogin,
-            showSignUp,
-            userAccount,
-            userLogged
+            lang,
+            menuContacto,
+            menuPrincipal
         }
 
     }
